@@ -76,6 +76,19 @@ header#main-header div.side ul li img {
     margin-right: 10px;
     margin-left: 2px;
 }
+
+
+input.pesquisa{
+    width:220px;
+    border: 2px solid #00070f;
+    height: 34px;
+    padding: 0 30px 0 12px;
+    border-radius: 16px;
+    color: #667580;
+    font-size: 12px;
+    background: #ffffff url("/images/search.svg") no-repeat 190px center;
+
+}
 .footer {
     background-color: rgb(38, 11, 97);
     width: 100%;
@@ -138,6 +151,12 @@ header#main-header div.side ul li img {
     width: 300px;
     padding-bottom: 10px;
 }
+
+.footer-col li.pagamento{
+    display: flex;
+    filter: grayscale(100%);
+}
+
 .footer-col ul li a:hover{
     color: #ffffff;
     padding-left: 10px;

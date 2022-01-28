@@ -55,7 +55,6 @@ header#main-header img {
 header#main-header div.side {
     display: flex;
     justify-content: space-between;
-    width: 100vw%;
     
 }
 
@@ -79,7 +78,7 @@ header#main-header div.side ul li img {
     margin-right: 10px;
     margin-left: 2px;
 }
-input {
+input.pesquisa{
     width:220px;
     border: 2px solid #00070f;
     height: 34px;
@@ -111,7 +110,9 @@ input {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    margin-top: 50px;
 }
 
 input[type="checkbox"]{
@@ -242,13 +243,42 @@ form .signup-link a:hover{
     text-decoration: underline;
 }
 
+.carrosel{
+    width:100vw;
+    height: 180px;
+    outline: 3px solid black;
+    overflow: hidden;
+
+    margin:10px auto;
+    margin-top: 1px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.2);
+}
+
+.carrosel ul{
+    list-style: none;
+    width: 1200px;
+    display: flex;
+}
+
+.carrosel li{
+    width: 100%;
+    position: relative;
+    animation: slide 10s infinite ease-in-out;
+}
+
+@keyframes slide{
+    0%{left: 0px;}
+    50%{left: -700px;}
+    100%{left: -1400px}
+}
+
+
 .footer {
     background-color: rgb(38, 11, 97);
     width: 100%;
     position: absolute;
     bottom: 0;
 }
-
 .container {
     max-width: 100vw;
     margin: auto;
@@ -298,11 +328,17 @@ form .signup-link a:hover{
     margin-left: 2vw;
     display: block;
     transition: all 0.3s ease;
+    align-items: center;
 }
 .footer-col li {
     list-style-type: none;
     width: 300px;
     padding-bottom: 10px;
+}
+
+.footer-col li.pagamento{
+    display: flex;
+    filter: grayscale(100%);
 }
 
 .footer-col ul li a:hover{
