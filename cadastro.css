@@ -58,18 +58,19 @@ header#main-header div.side {
 
 header#main-header div.side ul{
     display: flex;
+    justify-content: space-between;
     margin-left: 10px;
+
 }
 
 header#main-header div.side ul li{
     display: flex;
     align-items: center;
-
     list-style: none;
     color: rgb(25, 6, 66, 1);
     font-weight: bold;
     margin-left: 20px;
-    padding-right: 25px;
+    padding-right: -50px;
 }
 header#main-header div.side ul li img {
     border-radius: 50%;
@@ -77,10 +78,64 @@ header#main-header div.side ul li img {
     margin-left: 2px;
 }
 
+header#main-header div.side ul li div.dropdown button{
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: rgb(25, 6, 66, 1);
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+    
+}
 
-input.pesquisa{
+header#main-header div.side ul li div.dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+header#main-header div.side ul li div.dropdown:hover button{
+    background-color:#56C5D0 ;
+}
+
+header#main-header div.side ul li div.dropdown div{
+    background-color: #56C5D0 ;
+    box-shadow: 1px 3px 5px rgb(25, 6, 66, 1);
+    z-index: 1;
+    visibility: hidden;
+    position: absolute;
+    min-width: 100%;
+    opacity: 0;
+    transition: .3s;
+}
+header#main-header div.side ul li div.dropdown div a{
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+    color: #ffffff;
+    transition: .25s;
+    white-space: nowrap;
+}
+
+header#main-header div.side ul li div.dropdown:hover div{
+    visibility: visible;
+    opacity: 1;
+    border: 1px solid rgb(25, 6, 66, 1);
+}
+
+header#main-header div.side ul li div.dropdown div a:hover{
+    background-color: rgb(25, 6, 66, 1);
+    color: #ffffff;
+}
+
+
+header#main-header div.side input.pesquisa{
+    display: flex;
     width:220px;
-    border: 2px solid #00070f;
+    border: 2px solid rgb(25, 6, 66, 1);
     height: 34px;
     padding: 0 30px 0 12px;
     border-radius: 16px;
@@ -89,6 +144,36 @@ input.pesquisa{
     background: #ffffff url("/images/search.svg") no-repeat 190px center;
 
 }
+
+.carrosel{
+    width:100vw;
+    height: 150px;
+    outline: 3px solid black;
+    overflow: hidden;
+
+    margin:10px auto;
+    margin-top: 0px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.2);
+}
+
+.carrosel ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+}
+
+.carrosel li{
+    width: 100%;
+    position: relative;
+    animation: slide 20s infinite ease-in-out;
+}
+
+@keyframes slide{
+    0%{left: 0px;}
+    100%{left: -1920px;}
+    
+}
+
 .footer {
     background-color: rgb(38, 11, 97);
     width: 100%;

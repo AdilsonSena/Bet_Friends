@@ -14,12 +14,13 @@ body {
     -webkit-font-smoothing: antialiased !important;
 }
 header#main-header img.logo{
-    margin-left: 0px;
+    margin-left: 15px;
     padding-top: 1px;
     max-height: 90px;
     max-width: 90px;
     width: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+
 }
 header#main-header {
     display: flex;
@@ -40,11 +41,17 @@ header#main-header nav ul li {
     display: flex;
     align-items: center;
 
-    font-size: 16px;
+    font-size: 18px;
     color: rgb(25, 6, 66, 1);
     font-weight: bold;
 
-    margin-left: 25px;
+    margin-left: 24px;
+}
+
+header#main-header ul.navegacao {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-right: 40vw;
 }
 
 header#main-header img {
@@ -111,7 +118,7 @@ input.pesquisa{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding-top: 20px;
+    padding:30px;
     margin-top: 50px;
 }
 
@@ -245,31 +252,31 @@ form .signup-link a:hover{
 
 .carrosel{
     width:100vw;
-    height: 180px;
+    height: 150px;
     outline: 3px solid black;
     overflow: hidden;
 
     margin:10px auto;
-    margin-top: 1px;
+    margin-top: 0px;
     box-shadow: 10px 10px 15px rgba(0,0,0,0.2);
 }
 
 .carrosel ul{
     list-style: none;
-    width: 1200px;
+    width: 100%;
     display: flex;
 }
 
 .carrosel li{
     width: 100%;
     position: relative;
-    animation: slide 10s infinite ease-in-out;
+    animation: slide 20s infinite ease-in-out;
 }
 
 @keyframes slide{
     0%{left: 0px;}
-    50%{left: -700px;}
-    100%{left: -1400px}
+    100%{left: -1920px;}
+    
 }
 
 
