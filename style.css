@@ -231,11 +231,16 @@ form .btn button{
     border: none;
     color: #ffffff;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 550;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
 
+}
+
+form .btn button a{
+    text-decoration: none;
+    color: blanchedalmond;
 }
 
 form .signup-link{
