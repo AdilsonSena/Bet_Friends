@@ -304,12 +304,12 @@ form .btn button a{
 .texto p {
     color: aliceblue;
     display: flex;
-    width: 60%;
+    width: 65%;
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 500;
-    padding: 90px;
-    align-content: center
+    padding: 100px;
+    align-content: center;
 
 }
 
