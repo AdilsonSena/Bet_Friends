@@ -76,6 +76,14 @@ header#main-header div.side ul li img {
     margin-left: 2px;
 }
 
+header#main-header ul.navegacao {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-right: 40vw;
+    list-style: none;
+    text-decoration: none;
+}
+
 .show-btn{
     background-color: #56C5D0;
     padding: 10px 20px;
