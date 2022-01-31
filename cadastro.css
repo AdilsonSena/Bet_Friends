@@ -198,16 +198,16 @@ header#main-header div.side input.pesquisa{
 .footer {
     background-color: rgb(38, 11, 97);
     width: 100%;
-    position: absolute;
+    position: relative;
+    display: flex;
+    
 }
-
 .container {
     max-width: 100vw;
     margin: auto;
     display: flex;
     justify-content: space-between;
 }
-
 .row {
     display: flex;
     width: 88vw;
@@ -216,7 +216,7 @@ header#main-header div.side input.pesquisa{
     justify-content: space-between;
 }
 .footer-col {
-    width: 8%;
+    width: 18%;
     padding: 0 15px;
 }
 .footer-col h4 {
@@ -228,7 +228,7 @@ header#main-header div.side input.pesquisa{
     margin-left: 30px;
     font-weight: 500;
     position: relative;
-    white-space: nowrap,;
+    white-space: nowrap;
 }
 .footer-col h4::before{
     content: '';
