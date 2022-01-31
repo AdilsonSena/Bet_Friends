@@ -50,6 +50,8 @@ header#main-header ul.navegacao {
     flex-wrap: wrap;
     align-content: flex-start;
     margin-right: 40vw;
+    list-style: none;
+    text-decoration: none;
 }
 
 header#main-header img {
@@ -60,11 +62,13 @@ header#main-header img {
 header#main-header div.side {
     display: flex;
     justify-content: space-between;
+    width:25%;
     
 }
 
 header#main-header div.side ul{
     display: flex;
+    justify-content: space-between;
     margin-left: 10px;
 }
 
@@ -76,7 +80,7 @@ header#main-header div.side ul li{
     color: rgb(25, 6, 66, 1);
     font-weight: bold;
     margin-left: 20px;
-    padding-right: 25px;
+    padding-right: -50px;
 }
 header#main-header div.side ul li img {
     border-radius: 50%;

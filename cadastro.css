@@ -38,11 +38,18 @@ header#main-header nav ul li {
     display: flex;
     align-items: center;
 
-    font-size: 16px;
+    font-size: 18px;
     color: rgb(25, 6, 66, 1);
     font-weight: bold;
 
     margin-left: 25px;
+}
+
+header#main-header ul.navegacao {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-right: 40vw;
+    text-decoration: none;
 }
 
 header#main-header img {
@@ -91,6 +98,7 @@ header#main-header div.side input.pesquisa{
     background: #ffffff url("/images/search.svg") no-repeat 190px center;
 
 }
+
 .signup-box{
     width: 360px;
     height: 620px;

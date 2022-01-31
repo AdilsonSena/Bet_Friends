@@ -44,10 +44,18 @@ header#main-header nav ul li {
     margin-left: 25px;
 }
 
+header#main-header ul.navegacao {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-right: 40vw;
+    list-style: none;
+    text-decoration: none;
+}
+
 header#main-header img {
     margin-left: 20vw;
     margin-top: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 25;
     padding: 5px;
 }
 
@@ -55,7 +63,6 @@ header#main-header div.side {
     display: flex;
     justify-content: space-between;
     width: 25%;
-    
 }
 
 header#main-header div.side ul{
@@ -146,13 +153,7 @@ header#main-header div.side input.pesquisa{
     background: #ffffff url("/images/search.svg") no-repeat 190px center;
 
 }
-header#main-header ul.navegacao {
-    flex-wrap: wrap;
-    align-content: flex-start;
-    margin-right: 40vw;
-    list-style: none;
-    text-decoration: none;
-}
+
 .show-btn{
     background-color: #56C5D0;
     padding: 10px 20px;
@@ -318,42 +319,6 @@ form .btn button a{
     padding: 90px;
 
 }
-.footer {
-    background-color: rgb(38, 11, 97);
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-.carrosel{
-    width:100vw;
-    height: 150px;
-    outline: 3px solid black;
-    overflow: hidden;
-
-    margin:10px auto;
-    margin-top: 0px;
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.2);
-}
-
-.carrosel ul{
-    list-style: none;
-    width: 100%;
-    display: flex;
-}
-
-.carrosel li{
-    width: 100%;
-    position: relative;
-    animation: slide 20s infinite ease-in-out;
-}
-
-@keyframes slide{
-    0%{left: 0px;}
-    100%{left: -1920px;}
-    
-}
-
 .footer {
     background-color: rgb(38, 11, 97);
     width: 100%;
