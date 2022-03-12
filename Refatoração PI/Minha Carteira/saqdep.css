@@ -10,12 +10,12 @@
 }
 *{
     font-family: 'Roboto';
-    
 }
 
 html{
     overflow-x: hidden;
 }
+
 header{
     width: 100vw;
     display: flex;
@@ -163,6 +163,7 @@ main > div.optperfil > div.options{
 main > div.optperfil > div.options > ul{
     list-style: none;
     padding: 10px 10px 10px 10px;
+    
 }
 
 main > div.optperfil > div.options > ul > li{
@@ -173,146 +174,7 @@ main > div.optperfil > div.options > ul > li > a{
     color: #190642;
     font-size: 1rem;
     white-space: nowrap;
-    
 }
-
-main > div.optperfil >div.coluna2 > div.perfil{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--darkpurple-color);
-    border-radius: 5px;
-    margin-bottom: 2rem;
- 
-}
-main >div.optperfil > div.coluna2 >div.perfil > img.ft-perfil{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-    width: 140px;
-    height: 140px;
-    padding: 8px 8px 8px 8px;
-    border-radius: 5rem;
-    border: 3px solid var(--yellow-color);
-    background-color: var(--lightblue-color)
-}
- main > div.optperfil >div.coluna2 >div.perfil > img.lapis{
-    background-color: var(--yellow-color);
-    margin-left: 55%;
-    margin-right: 35%;
-    margin-top: -28px;
-    cursor: pointer;
-    padding: 5px;
-    width: 35px;
-    border-radius: 2rem;
-}
-main >div.optperfil >div.coluna2 > div.perfil > h4{
-    font-size: 1.2rem;
-    color: var(--yellow-color);
-    margin: auto;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-main > div.optperfil >div.coluna2 > div.perfil > p{
-    color: var(--yellow-color);
-    margin: auto;
-    margin-bottom: 1.2rem;
-}
-main >div.optperfil >div.coluna2 > div.email{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--darkpurple-color);
-    border-radius: 5px;
-    margin-bottom: 2rem;
-}
-
-main >div.optperfil >div.coluna2 > div.email > h4{
-    color: var(--yellow-color);
-    margin-left: 30px;
-    margin-top: 20px;
-}
-main >div.optperfil >div.coluna2 > div.email > p{
-    color: var(--yellow-color);
-    margin-left: 30px;
-}
-
-main >div.optperfil >div.coluna2 > div.email > p.primario{
-    margin-bottom: -5px;
-}
-
-main > div.optperfil >div.coluna2 >div.email > div.emailcheck{
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-    margin-top: 1px;
-}
-main >div.optperfil >div.coluna2 > div.email > div.emailcheck > p{
-    color: var(--yellow-color);
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-} 
-main > div.optperfil >div.coluna2 >div.email > div.emailcheck > img{
-    margin-left: 5px;
-    width: 22px;
-}
-
-main > div.optperfil >div.coluna2 >div.email > div.emailcheck > input{
-    width: 220px;
-    border: 1px solid var(--lightpurple-color);
-    height: 2.5rem;  
-    padding: 0 30px 0 12px;   
-    border-radius: 8px; 
-    font-size: .825rem;
-    background: var(--lightblue-color) url("../images/lock.svg") no-repeat 190px center; 
-}
-
-main >div.optperfil >div.coluna2 > div.email > .addemail{
-    color: #FED501;
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-}
-main > div.optperfil >div.coluna2 >div.email > .addemail > img{
-    margin-top: -1rem;
-    margin-right: 10px;
-    cursor: pointer;
-}
-main > div.optperfil > div.coluna2 > div.closeacc{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    background-color: var(--darkpurple-color);
-    border-radius: 5px;
-}
-main > div.optperfil >div.coluna2 >div.closeacc > h4{
-    margin-left: 30px;
-    margin-top: 20px;
-    color: var(--yellow-color);
-    font-size: 1.2rem;
-}
-
-main > div.optperfil >div.coluna2 >div.closeacc > div.fechar > p{
-    color: var(--yellow-color);
-    font-size: 1rem;
-    margin-left: 30px;
-}
-
-main >div.optperfil > div.coluna2 > div.closeacc > div.fechar > button{
-    background-color: var(--yellow-color);
-    color: var(--darkpurple-color);
-    font-size: 1.2rem;
-    margin-left: 30px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    padding: 3px 20px 3px 20px;
-    border: none;
-    
-}
-
 
 footer{
     bottom: 0px;
@@ -442,14 +304,10 @@ footer > div.suporte > div.listas > ul.apostas > img.logo23{
 
     main > div.optperfil > div.options {
         display: flex;
-        max-height: 120px;
         margin-right: 5vw;
         margin-left: 10vw;
     }
-    main > div.optperfil > div.coluna2 {
-        width: 60vw;
-        margin-right: 10vw;
-    }
+    
 
     footer {
         background-color: #FED501;
