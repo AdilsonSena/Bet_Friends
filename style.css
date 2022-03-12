@@ -87,6 +87,15 @@ header#main-header div.side ul li img {
     margin-right: 10px;
     margin-left: 2px;
 }
+@media (min-width: 481px) {
+    #main-header {
+      padding: 20px 10px;
+    }
+  
+    #main-header > img {
+      width: 128px;
+    }
+  }
 input.pesquisa{
     width:220px;
     border: 2px solid #00070f;
@@ -385,3 +394,4 @@ form .signup-link a:hover{
         margin-bottom: 30px;
     }
 }
+
