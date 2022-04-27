@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/stylesheets/mywallet.css">
+    <title>BetFriends</title>
+</head>
+<body id="pageid">
+    <header>
+
+       <img src="../images/logo.svg" alt="">
+
+       <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../images/hamburguer.svg" width="35px">
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Configurações de Conta</a></li>
+          <li><a class="dropdown-item" href="#">Minha carteira</a></li>
+          <li><a class="dropdown-item" href="#">Minhas Apostas</a></li>
+          <li><a class="dropdown-item" href="#">Aposta Responsável</a></li>
+          <li><a class="dropdown-item" href="#"><strong>Logout</strong></a></li>
+        </ul>
+      </div>
+
+       <nav class="navbar">
+           <a href="#">Futebol</a>
+           <a href="#">Apostas personalizadas</a>
+           <a href="#">Hype</a>
+           <input type="text">
+       </nav>
+
+       
+
+       <nav class="navbar-right">
+        <a href="#"class="apostas">Minhas Apostas</a>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../images/icon usuario.svg" alt="">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Configurações de Conta</a></li>
+              <li><a class="dropdown-item" href="#">Minha Carteira</a></li>
+              <li><a class="dropdown-item" href="#">Aposta Responsável</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><strong>Logout</strong></a></li>
+            </ul>
+          </div>
+
+        
+    </nav>
+    </header>
+
+    <main>
+        
+        <h1>Minha Carteira</h1>
+        
+        <div class="optperfil">
+            <div class="options">
+
+                <ul>
+                    <li><a href="#">Configurações de conta</a></li>
+                    <li><a href="#"><strong> Minha Carteira</strong></a></li>
+                    <li><a href="#">Minhas Apostas</a></li>
+                    <li><a href="#">Aposta Responsável</a></li>
+                </ul>
+
+            </div>
+            
+            <div class="coluna2">
+
+                <div class="historico">
+                    <div class="wallet">
+                        <div class="wallet-left">
+                        <h2>Histórico de transações</h2> 
+                        <p><img src="../images/wallet.svg" alt="">BRL R$3000.00</p>
+                        </div>
+                        <div class="wallet-right">
+                            <p class="pendente"><img src="../images/questionmark.svg" alt=""> Apostas Pendentes</p>
+                            <p class="valor">R$ 100,00</p>
+                        </div>
+                    </div>
+                    
+                        <table style="width:90%">
+                            <tr>
+                              <th>Criação</th>
+                              <th>Descrição</th>
+                              <th>Status</th>
+                              <th>Valor</th>
+                            </tr>
+                            <th>
+                               
+                            </th>
+                            <tr>
+                             <td>
+                                  Personalizada<br>04/03/2022
+                            </td>
+                              <td>Quem ganha <br>mais nota</td>
+                              <td>Você Ganhou</td>
+                              <td>R$ 1000.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     Personalizada<br>04/03/2022
+                               </td>
+                                 <td>Quem ganha <br>mais nota</td>
+                                 <td>Você Ganhou</td>
+                                 <td>R$ 100000.00</td>
+                               </tr>
+                          </table>
+
+                </div>
+                
+                <div class="saque">
+                    <h2>Saque</h2>
+                    <p>Seu saque será efetuado na moeda BRL</p>
+                    <p>BRL R$ 0,00</p>
+                    <p>Você receberá um Pix como transferência para a sua conta. <br> A transferência não ocorrerá caso o CPF da conta a ser depositada não seja o mesmo do cadastrado no site.</p>
+                    <img src="../images/pixYe.svg" alt="">
+                    <p class="pix">
+                        Pix <br>
+                        Deposite instantaneamente, 24/7 usando o Pix.<br>
+                        Pix é o sistema de pagamentos criado pelo Banco Central do Brasil que usa QR Codes para transferir dinheiro globalmente em tempo real. Os depósitos realizados via Pix demoram poucos minutos para serem creditados em sua conta. <br>
+                        Você precisará de: <br>
+                    </p>
+                    <ul>
+                        <li>✓  Uma chave Pix</li>
+                        <li>✓  Acesso ao seu bankline</li>
+                    </ul>
+                    <button class="confirmar"><img src="../images/square.svg" alt=""> Confirmar</button>
+                    <button class="sacar"><strong> Sacar</strong></button>
+                </div>
+
+                <div class="ldeposito">
+
+                    <h2>Limites de Depósito</h2>
+                    <ul>
+                        <li>Você pode definir um limite de quanto você deseja depositar no site a qualquer momento</li>
+                        <li>Ao reduzir a quantia, o novo limite entrará em vigor imediatamente</li>
+                        <li>Ao Aumentar ou remover a quantia, o limite entrará em vigor em sete dias</li>
+                        <li>Seu limite não pode estar abaixo do valor do depósito mínimo de $15.00</li>
+                        <li>Seu limite é registrado na moeda base USD. Seus limites podem mudar ao longo do tempo com base na taxa de câmbio da época.</li>
+                    </ul>
+                    <h4>Quero limitar meus depósitos</h4>
+    
+                    <div class="inputs">
+                        <div class="input1 input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" placeholder="60,00" aria-label="Dollar amount (with dot and two decimal places)">
+                          </div>
+    
+                        <div class="input2 input-group mb-3">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="../images/Polygon 4.svg" alt=""></button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#">10</a></li>
+                              <li><a class="dropdown-item" href="#">20</a></li>
+                              <li><a class="dropdown-item" href="#">30</a></li>
+                              <li><a class="dropdown-item" href="#">40</a></li>
+                            </ul>
+                          </div>
+                    </div>
+    
+                    <div class="input3 input-group mb-3">
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Todo dia">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="../images/Polygon 4.svg" alt=""></button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="#">10</a></li>
+                          <li><a class="dropdown-item" href="#">20</a></li>
+                          <li><a class="dropdown-item" href="#">30</a></li>
+                          <li><a class="dropdown-item" href="#">40</a></li>
+                        </ul>
+                      </div>
+    
+                      <button><strong> Ajustar Limites</strong></button>
+    
+                </div>
+
+                <div class="depositos">
+                    <h2>Depósitos</h2>
+                    <p>Escolha a carteira que será usada para o depósito</p>
+                    <p> BRL R$ 0,00</p>
+                    <p>Nós aceitamos os seguinte provedores de pagamento, além de muitos outros</p>
+                    <img src="../images/barcode.svg" alt="">
+                    <p>Boleto</p>
+                    <p>Deposite via Boleto de uma forma simples e prática.</p>
+                    <p>Basta gerar o boleto e efetuar o pagamento do mesmo via Bankline ou qualquer casa lotéria / banco. Os depósitos via Boleto demoram de 1 a 2 dias úteis para serem aprovados e o crédito ser efetuado.</p>
+                    <p>Você precisará de:</p>
+                    <ul>
+                        <li>✓ Gere o Boleto e pague antes do vencimento.</li>
+                        <li>✓ Pague em do seu bankline ou em bancos / loterias locais.</li>
+                    </ul>
+
+                    <button class="confirmar"><img src="../images/square.svg" alt="">Confirmar</button><br>
+                    <img src="../images/pixYe.svg" alt="">
+                    <p>PIX</p>
+                    <p>Deposite instantaneamente, 24/7 usando o Pix.</p>
+                    <p>Pix é o sistema de pagamentos criado pelo Banco Central do Brasil que usa QR Codes para transferir dinheiro globalmente em tempo real. Os depósitos realizados via Pix demoram poucos minutos para serem creditados em sua conta.</p>
+                    <p>Você precisará de:</p>
+                    <ul>
+                        <li>✓ Uma chave Pix</li>
+                        <li>✓ Acesso ao seu bankline</li>
+                    </ul>
+                    <button class="confirmar"><img src="../images/square.svg" alt="">Confirmar</button> <br>
+                    <img src="../images/paypal.svg" alt="">
+                    <p>PayPal</p>
+                    <p>PayPal é uma carteira eletrônica. Você pode fazer pagamentos usando cartão de crédito cadastrado, transferência bancária ou Boleto.</p>
+                    <p>Você precisará de: </p>
+                    <ul>
+                        <li>✓ Conta PayPal com cartões cadastrados.</li>
+                        <li>✓ ou Conta PayPal carregada com fundos.</li>
+                    </ul>
+                    <button class="sacar"><strong>Sacar</strong></button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer>
+        
+        <div class="temas">
+            <p>Apostas</p>
+            <p>Conteúdo</p>
+            <p>Suporte</p>
+            <p>Legal</p>
+        </div>
+
+    
+ <div class="suporte">
+
+        <div class="listas">
+
+            <ul class="apostas">
+                <a href=""><li>Apostas personalizadas</li></a>
+                <a href=""><li>Apostas Futebol</li></a>
+                <img src="../images/logo22.svg" alt="Logo2022" class="logo23">
+
+            </ul>
+            <ul class="conteudo">
+                <a href=""><li>Pagina Inicial</li></a>
+                <a href=""><li>Notícias</li></a>
+                <a href=""><li>Depósitos</li></a>
+            </ul>
+            <ul class="contato">
+                <a href=""><li>FAQ</li></a>
+                <a href=""><li>Contate-nos</li></a>
+                <a href=""><li>Sobre nós</li></a>
+            </ul>
+            <ul class="legal">
+                <a href=""><li>Termos e condições</li></a>
+                <a href=""><li>Política de Privacidade</li></a>
+                <a href=""><li>Aposta Responsável</li></a>
+                <a href=""><li>Regra de Apostas</li></a>
+            </ul>
+        </div>
+    <img  class="line" src="../images/Line 4.svg">
+
+    <div class="social">
+            <ul class="nomes">
+                <li>Anderson</li>
+                <li>Adilson</li>
+                <li>Luiz</li>
+                <li>Matheus</li>
+                <li>Nicholas</li>
+                <li>Rachel</li>
+            </ul>
+            <ul class="links">
+                <li>
+                    <a href="#"><img src="../images/linkedin.svg" alt="linkedin"></a>
+                    <a href=""><img src="../images/github.svg" alt="Github"></a>
+                    <a href=""><img src="../images/instagram.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/linkedin.svg" alt="linkedin"></a>
+                    <a href=""><img src="../images/github.svg" alt="Github"></a>
+                    <a href=""><img src="../images/instagram.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/linkedin.svg" alt="linkedin"></a>
+                    <a href=""><img src="../images/github.svg" alt="Github"></a>
+                    <a href=""><img src="../images/instagram.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/linkedin.svg" alt="linkedin"></a>
+                    <a href=""><img src="../images/github.svg" alt="Github"></a>
+                    <a href=""><img src="../images/instagram.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/linkedin.svg" alt="linkedin"></a>
+                    <a href=""><img src="../images/github.svg" alt="Github"></a>
+                    <a href=""><img src="../images/instagram.svg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="../images/linkedin.svg" alt="linkedin"></a>
+                    <a href=""><img src="../images/github.svg" alt="Github"></a>
+                    <a href=""><img src="../images/instagram.svg" alt=""></a>
+                </li>
+                
+            </ul>
+    
+
+    </div>
+        <img src="../images/logo22.svg" alt="Logo2022" class="logo22">
+</div>
+        
+    </footer>
+    
+</body>
+</html>
