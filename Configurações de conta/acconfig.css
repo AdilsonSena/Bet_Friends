@@ -263,7 +263,7 @@ main > div.optperfil >div.coluna2 >div.email > div.emailcheck > input{
     width: 220px;
     border: 1px solid var(--lightpurple-color);
     height: 2.5rem;  
-    padding: 0 30px 0 12px;   
+    padding: 0 30px 0 30px;   
     border-radius: 8px; 
     font-size: .825rem;
     background: var(--lightblue-color) url("../images/lock.svg") no-repeat 190px center; 
