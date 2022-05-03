@@ -2,8 +2,18 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+
+
+router.get('/home', function(req, res, next) {
   res.render('index');
+});
+
+router.get('/logged', function(req, res, next) {
+  res.render('loggedHome');
+});
+
+router.get('/home1', function(req, res, next) {
+  res.render('./partials/header');
 });
 
 router.get('/wallet', function(req, res, next) {
@@ -53,7 +63,5 @@ router.get('/aposta-responsavel', function(req, res, next) {
 router.get('/aposta-final', function(req, res, next) {
   res.render('./user/apostaFinal')
 })
-
-
 
 module.exports = router;
