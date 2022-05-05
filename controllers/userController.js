@@ -6,6 +6,15 @@ const { validationResult } = require('express-validator');
 module.exports = {
     createUser: async (req, res) => {
         try {
+            
+            const errors = validationResult(req);
+
+            if (!errors.isEmpty()) {
+                req.flash('errors', errors.mapped());
+                req.flash('values', req.body);
+                
+                 return  res.redirect('/home').render('home');
+            }
             const {
                 username,
                 name,
@@ -15,15 +24,6 @@ module.exports = {
                 cpf,
                 birthDate
             } = req.body;
-
-            const errors = validationResult(req);
-            if (!errors.isEmpty()) {
-                req.flash('errors', errors.mapped());
-                req.flash('values', req.body)
-
-
-                return res.status(400).json({ errors: errors.mapped() });
-            }
 
             const user = await userModel.findOne({ where: { email } });
 
@@ -43,7 +43,7 @@ module.exports = {
                     cpf,
                     birthDate
                 });
-                return res.redirect('/home');
+                return res.redirect([status], path);
 
             }
         } catch (error) {

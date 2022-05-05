@@ -784,3 +784,13 @@ div.modal-header {
     margin-left: 15px;
   }
 }
+
+.form small{
+  color: red;
+  margin-left: 40px;
+  white-space: nowrap;
+}
+
+.form small.last{
+  margin-left: 5px;
+}

@@ -1,25 +1,32 @@
 const { body } = require('express-validator');
-
+const userModel = require('../../database/models/user');
+const sequelize = require('sequelize');
 
 const registerValidator = [
     body('username')
     .notEmpty()
-    .withMessage('O campo username é obrigatório'),
+    .withMessage('O campo Apelido é obrigatório'),
 
     body('name')
     .notEmpty()
-    .withMessage('O campo nome é obrigatório'),
+    .withMessage('Preencha o campo nome'),
 
     body('lastName')
     .notEmpty()
-    .withMessage('O campo sobrenome é obrigatório'),
+    .withMessage('Preencha o campo sobrenome'),
 
     body('email')
     .notEmpty()
     .bail()
     .withMessage('O campo email é obrigatório')
     .isEmail()
-    .withMessage('Digite um endereço de email válido'),
+    .withMessage('Digite um endereço de email válido')
+    .bail()
+    .custom(async (value, { req }) => {
+        const user = await userModel.findOne({ where: { email: value } });
+        if (user) {
+            throw new Error('Este email já está cadastrado');
+    }}),
 
     body('password')
     .notEmpty()
