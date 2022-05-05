@@ -85,59 +85,68 @@
 
                             <label class="apelido" for="Título"><strong>Apelido</strong></label>
                             <input class="apelido-esp" type="text" id="Título" placeholder="Escolha um Apelido"
-                                name="username" required>
+                                name="username">
                             <p class="apelido-info">Não se preocupe, você pode mudar depois.</p>
                             <div class="nome-e-sobrenome">
                                 <!-- nome real -->
                                 <label class="nome-real" for="Nome-Real">Nome</label>
-                                <input class="nome-real-esp" type="text" id="Título" placeholder="Nome" name="name"
-                                    required>
+                                <input class="nome-real-esp" type="text" id="Título" placeholder="Nome" name="name">
                                 <!-- sobrenome real -->
                                 <label class="sobrenome-real" for="Nome-Real">Sobrenome</label>
                                 <input class="sobrenome-real-esp" type="text" id="Título" placeholder="Sobrenome"
-                                    name="lastName" required>
+                                    name="lastName">
                                 <p class="info-nome-e-sobrenome">Vamos precisar do seu nome para verificar
-                                     sua
+                                    sua
                                     identidade e poder enviar seus ganhos</p>
                             </div>
                             <!-- cadastrando o email -->
                             <label class="email-valido" for="Nome-Real">Insira um Email valido.</label>
-                            <input class="email-valido-esp" type="text" id="Título" placeholder="Email" name="email"
-                                required>
-                            <input class="gerando-senha" type="password" id="Título" placeholder="Senha" name="password"
-                                required>
-                            <input class="gerando-senha" type="password" id="Título" placeholder="Confirmar senha" name="checkpassword"
-                                required>
-                                <p class="info-senha">Sua senha precisa de:</p>
-                            <ul class="info-senha-ul">
-                                <li>1 Letra maiúscula;</li>
-                                <li>8 caracteries no mínimo;</li>
-                                <li>1 número;</li>
-                                <li>1 caracter especial.</li>
-                            </ul>
-                            <label class="email-valido" for="Nome-Real">Insira seu CPF</label>
-                            <input class="email-valido-esp" type="text" id="Título" placeholder="CPF" name="cpf"
-                                required>
+                            <input class="email-valido-esp" type="text" id="Título" placeholder="Email" name="email">
+                            <!-- <small>TESTESTES</small>-->
 
-                            
-                            <!-- Aniversário -->
-                            <label class="aniversario-label" for="data-de-aniversário">Data de Aniversário</label>
-                            <input class="dia-do-aniversario" type="date" id="Título" required name="birthDate">
-                            <p class="dia-do-aniversario2">Você precisa ter idade legal para poder apostar (18 anos ou
-                                mais).</p>
-                            <div class="checkbox-cadastro-do-cliente">
-                                <input class="checkbox-cadastro" type="checkbox" id="Título" value="aceito" required>
-                                <label class="checkbox-label-cadastro-do-cliente"
-                                    for="checkbox-label-cadastro-do-cliente">Aqui você escolhe receber nossos bônus
-                                    exclusivos e atualizações via email e whatsapp.</label>
-                                <input class="checkbox-cadastro" type="checkbox" id="Título" value="aceito" required>
-                                <label class="checkbox-label-cadastro-do-cliente"
-                                    for="checkbox-label-cadastro-do-cliente">Eu Aceito os Termos & Condições.</label>
-                            </div>
+                            <% if (locals.errors && errors.email) { %>
+                                <small>
+                                    <%= errors.email.msg %>
+                                </small>
+                                <% } %>
+                                    <input class="gerando-senha" type="password" id="Título" placeholder="Senha"
+                                        name="password">
+                                    <input class="gerando-senha" type="password" id="Título"
+                                        placeholder="Confirmar senha" name="checkpassword">
+                                    <p class="info-senha">Sua senha precisa de:</p>
+                                    <ul class="info-senha-ul">
+                                        <li>1 Letra maiúscula;</li>
+                                        <li>8 caracteries no mínimo;</li>
+                                        <li>1 número;</li>
+                                        <li>1 caracter especial.</li>
+                                    </ul>
+                                    <label class="email-valido" for="Nome-Real">Insira seu CPF</label>
+                                    <input class="email-valido-esp" type="text" id="Título" placeholder="CPF"
+                                        name="cpf">
+
+
+                                    <!-- Aniversário -->
+                                    <label class="aniversario-label" for="data-de-aniversário">Data de
+                                        Aniversário</label>
+                                    <input class="dia-do-aniversario" type="date" id="Título" name="birthDate">
+                                    <p class="dia-do-aniversario2">Você precisa ter idade legal para poder apostar (18
+                                        anos ou
+                                        mais).</p>
+                                    <div class="checkbox-cadastro-do-cliente">
+                                        <input class="checkbox-cadastro" type="checkbox" id="Título" value="aceito">
+                                        <label class="checkbox-label-cadastro-do-cliente"
+                                            for="checkbox-label-cadastro-do-cliente">Aqui você escolhe receber nossos
+                                            bônus
+                                            exclusivos e atualizações via email e whatsapp.</label>
+                                        <input class="checkbox-cadastro" type="checkbox" id="Título" value="aceito">
+                                        <label class="checkbox-label-cadastro-do-cliente"
+                                            for="checkbox-label-cadastro-do-cliente">Eu Aceito os Termos &
+                                            Condições.</label>
+                                    </div>
 
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Finalizar
+                            <button type="submit" class="btn btn-secondary">Finalizar
                                 Cadastro!</button>
                             <div class="icones-de-rede-social-rachel">
                                 <img src="./images/facebook.png" alt="Facebook" width="30px">

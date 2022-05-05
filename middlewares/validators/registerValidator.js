@@ -25,8 +25,8 @@ const registerValidator = [
     .notEmpty()
     .bail()
     .withMessage('O campo senha é obrigatório')
-    .isLength({min: 6})
-    .withMessage('A senha deve ter no mínimo 6 caracteres'),
+    .isLength({min: 8})
+    .withMessage('A senha deve ter no mínimo 8 caracteres'),
     
     body('checkpassword')
     .notEmpty()

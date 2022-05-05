@@ -1,6 +1,7 @@
 const userModel = require('../database/models/user');
 
 const bcrypt = require('bcrypt');
+const { validationResult } = require('express-validator');
 
 module.exports = {
     createUser: async (req, res) => {
@@ -14,15 +15,25 @@ module.exports = {
                 cpf,
                 birthDate
             } = req.body;
+
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) {
+                req.flash('errors', errors.mapped());
+                req.flash('values', req.body)
+
+
+                return res.status(400).json({ errors: errors.mapped() });
+            }
+
             const user = await userModel.findOne({ where: { email } });
-            
+
             if (user) {
                 res.status(401).json({ message: 'Usuário já cadastrado nesse email' });
 
             } else {
-                
+
                 const hash = await bcrypt.hashSync(password, 10);
-                
+
                 const user = await userModel.create({
                     username,
                     name,
@@ -32,13 +43,13 @@ module.exports = {
                     cpf,
                     birthDate
                 });
-                return res.redirect('/logged');
-            
+                return res.redirect('/home');
+
             }
         } catch (error) {
-            return res.status(400).json(error); 
+            return res.status(400).json(error);
         }
-        
+
     },
     listUsers: async (req, res) => {
         try {
