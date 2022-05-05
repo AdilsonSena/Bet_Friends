@@ -57,7 +57,7 @@ router.get('/config', function(req, res, next) {
 })
 
 router.get('/aposta-responsavel', function(req, res, next) {
-  res.render('./user/apostaResp')
+  res.render('./user/apostaResponsavel')
 })
 
 router.get('/aposta-final', function(req, res, next) {
