@@ -44,6 +44,7 @@
                         <h5 class="modal-title" id="exampleModalLabel"><img src="./images/logo.svg" alt="Logo"
                                 width="100px"></h5>
                     </div>
+                    <!--colocar final da url de forma dinamica login?redirect=http://localhost:3000/logged -->
                     <form action="/login" method="post">
                         <div class="modal-body">
 
@@ -95,7 +96,8 @@
                                 <label class="sobrenome-real" for="Nome-Real">Sobrenome</label>
                                 <input class="sobrenome-real-esp" type="text" id="Título" placeholder="Sobrenome"
                                     name="lastName" required>
-                                <p class="info-nome-e-sobrenome">Vamos precisar do seu nome para verificar sua
+                                <p class="info-nome-e-sobrenome">Vamos precisar do seu nome para verificar
+                                     sua
                                     identidade e poder enviar seus ganhos</p>
                             </div>
                             <!-- cadastrando o email -->
@@ -104,17 +106,20 @@
                                 required>
                             <input class="gerando-senha" type="password" id="Título" placeholder="Senha" name="password"
                                 required>
-                            <label class="email-valido" for="Nome-Real">Insira seu CPF</label>
-                            <input class="email-valido-esp" type="text" id="Título" placeholder="CPF" name="cpf"
+                            <input class="gerando-senha" type="password" id="Título" placeholder="Confirmar senha" name="checkpassword"
                                 required>
-
-                            <p class="info-senha">Sua senha precisa de:</p>
+                                <p class="info-senha">Sua senha precisa de:</p>
                             <ul class="info-senha-ul">
                                 <li>1 Letra maiúscula;</li>
                                 <li>8 caracteries no mínimo;</li>
                                 <li>1 número;</li>
                                 <li>1 caracter especial.</li>
                             </ul>
+                            <label class="email-valido" for="Nome-Real">Insira seu CPF</label>
+                            <input class="email-valido-esp" type="text" id="Título" placeholder="CPF" name="cpf"
+                                required>
+
+                            
                             <!-- Aniversário -->
                             <label class="aniversario-label" for="data-de-aniversário">Data de Aniversário</label>
                             <input class="dia-do-aniversario" type="date" id="Título" required name="birthDate">

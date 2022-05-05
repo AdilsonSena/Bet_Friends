@@ -76,8 +76,10 @@
             <div class="coluna2">
             <div class="perfil">
                 <img src="../images/icon usuario.svg" alt="Foto de Perfil" class="ft-perfil"><img src="../images/editar.svg" alt="Editar" class="lapis" width="20px">
-                <h4>Fulaninho</h4>
-                <p>Entrou em 20 de março de 2022</p>
+                <h4><% if(user){ %>
+                    <%= user.username %>
+                    <% } %></h4>
+                <p><%= user.createdAt %></p>
                 <h4>Redefinir senha</h4>
                 <h4>Redefinir Apelido</h4>
             </div>

@@ -6,7 +6,7 @@ const loginValidator = require('../middlewares/validators/loginValidator');
 
 
 
-router.post('/logged', loginValidator, loginController.login);
+router.post('/login', loginValidator , loginController.login);
 
 
 module.exports = router;

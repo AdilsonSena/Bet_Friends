@@ -28,6 +28,17 @@ const registerValidator = [
     .isLength({min: 6})
     .withMessage('A senha deve ter no mínimo 6 caracteres'),
     
+    body('checkpassword')
+    .notEmpty()
+    .bail()
+    .withMessage('O campo confirmar senha é obrigatório')
+    .custom((value, { req }) => {
+        if (value !== req.body.password) {
+            throw new Error('Senhas não conferem');
+        }
+        return true;
+    }),
+
     body('cpf')
     .notEmpty()
     .bail()
