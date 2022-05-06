@@ -13,8 +13,9 @@ module.exports = {
                 req.flash('errors', errors.mapped());
                 req.flash('values', req.body);
                 
-                 return  res.redirect('/home').render('home');
+                    res.redirect('/home');
             }
+
             const {
                 username,
                 name,
@@ -43,7 +44,7 @@ module.exports = {
                     cpf,
                     birthDate
                 });
-                return res.redirect([status], path);
+                return res.redirect("/logged");
 
             }
         } catch (error) {

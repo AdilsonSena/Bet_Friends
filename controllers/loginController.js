@@ -12,8 +12,9 @@ const loginController = {
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
 
-            return res.redirect('/login');
+            return res.redirect('/home');
         }
+
         const { email, password } = req.body;
         const user = await userModel.findOne({ where: { email } });
 

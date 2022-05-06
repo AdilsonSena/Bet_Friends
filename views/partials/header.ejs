@@ -44,16 +44,25 @@
                         <h5 class="modal-title" id="exampleModalLabel"><img src="./images/logo.svg" alt="Logo"
                                 width="100px"></h5>
                     </div>
-                    <!--colocar final da url de forma dinamica login?redirect=http://localhost:3000/logged -->
-                    <form action="/login" method="post">
+                    <form action="/login" method="post" class="form-log">
                         <div class="modal-body">
-
                             <label class="login-email" for="Título"><strong>Login</strong></label>
+                            <% if (locals.errors && errors.email) { %>
+                                <small>
+                                    <%= errors.email.msg %>
+                                </small>
+                                <% } %>
                             <input class="login-email-esp" type="text" id="Título" placeholder="Email" name="email"
                                 required>
+                            <label class="login-email" for="Título"><strong>Senha</strong></label>
+                            <% if (locals.errors && errors.password) { %>
+                                <small>
+                                    <%= errors.password.msg %>
+                                </small>
+                                <% } %>
                             <input class="senha-email-esp" type="password" id="Título" placeholder="Senha"
                                 name="password" required>
-
+                                
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Entrar</button>
@@ -78,11 +87,10 @@
                     <form action="/users" method="post" class="form">
                         <div class="modal-header">
                             <h5 class="modal-title" id="staticBackdropLabel"><img src="./images/logo.svg" alt="Logo"
-                                    width="100px"></h5>
+                                    width="100px" class="img-signup"></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-
                             <label class="apelido" for="Título"><strong>Apelido</strong></label>
                             <input class="apelido-esp" type="text" id="Título" placeholder="Escolha um Apelido"
                                 name="username">

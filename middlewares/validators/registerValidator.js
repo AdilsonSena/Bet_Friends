@@ -33,7 +33,8 @@ const registerValidator = [
     .bail()
     .withMessage('O campo senha é obrigatório')
     .isLength({min: 8})
-    .withMessage('A senha deve ter no mínimo 8 caracteres'),
+    .withMessage('A senha deve ter no mínimo 8 caracteres')
+    .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/),
     
     body('checkpassword')
     .notEmpty()
@@ -58,8 +59,14 @@ const registerValidator = [
     .notEmpty()
     .bail()
     .withMessage('O campo data de nascimento é obrigatório')
-    .isISO8601()
-    .withMessage('Digite uma data válida')
+    .custom((value, { req }) => {
+            const date18YrsAgo = new Date();
+            date18YrsAgo.setFullYear(date18YrsAgo.getFullYear() - 18);
+            
+            return value <= date18YrsAgo;
+         
+    })
+    .withMessage('Você precisa ter mais de 18 anos para se cadastrar'),
 ]
 
 module.exports = registerValidator;
