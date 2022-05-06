@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    background: var(--darkpurple-color);
+}
+
+:root{
+    --darkpurple-color: #190642;
+    --lightpurple-color:#5D33B3;
+    --yellow-color: #FED501;
+    --lightblue-color: #A0CED2;
+    --blue-color: #56C5D0;
+}
+*{
+    font-family: 'Roboto';
+}
+
+main > .aposta-time{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+main > .aposta-time .btns{
+    display: flex;
+    margin: 30px auto 20px auto;
+}
+main > .aposta-time .btns button{
+    margin-right: 50px;
+    width: 130px;
+    border-radius: 10px;
+    background-color: #FED501;
+    color: var(--darkpurple-color);
+    font-weight: 500;
+    border: none;
+    height: 50px;
+}
+
+main > .aposta-time .btns button:hover{
+    background-color: #e8ae00;
+    outline: 2px solid #e8ae00;
+}
