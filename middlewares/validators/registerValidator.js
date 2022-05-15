@@ -59,6 +59,7 @@ const registerValidator = [
             throw new Error('Este cpf já está cadastrado');
         }
     }),
+
     
 
     body('birthDate')

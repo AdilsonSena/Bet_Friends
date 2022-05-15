@@ -12,9 +12,9 @@ const loginController = {
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
 
-
             res.redirect('/login');
             return;
+
 
         }
 
@@ -27,7 +27,6 @@ const loginController = {
 
                 if (isPasswordCorrect) {
                     req.session.user = user;
-
 
                     res.redirect('/config').render('/users/config',{ user: {
 

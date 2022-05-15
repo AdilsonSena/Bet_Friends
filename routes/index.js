@@ -19,6 +19,9 @@ router.get('/sign-up', function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render('login');
 
+});
+
+
 router.get('/wallet', function(req, res, next) {
   res.render('./user/mywallet.ejs')
 })
