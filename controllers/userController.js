@@ -12,10 +12,10 @@ module.exports = {
             if (!errors.isEmpty()) {
                 req.flash('errors', errors.mapped());
                 req.flash('values', req.body);
-                
-               // res.status(400).json({ errors: errors.mapped() }); 
+               
                  res.redirect('/sign-up');
                  return;
+
             }
 
             const {
@@ -33,7 +33,6 @@ module.exports = {
             if (user) {
                 res.status(401).json({ message: 'Usuário já cadastrado nesse email' });
                 return;
-
             } else {
 
                 const hash = await bcrypt.hashSync(password, 10);
@@ -47,6 +46,7 @@ module.exports = {
                     cpf,
                     birthDate
                 });
+
                 res.redirect("/login");
                 return;
             }
@@ -54,7 +54,6 @@ module.exports = {
              res.status(400).json(error)
              return;
         }
-
     },
     listUsers: async (req, res) => {
         try {

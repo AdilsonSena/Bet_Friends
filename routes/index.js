@@ -12,13 +12,14 @@ router.get('/logged', function(req, res, next) {
   res.render('loggedHome');
 });
 
+
 router.get('/sign-up', function(req, res, next) {
   res.render('sign-up');
 })
 
 router.get('/login', function(req, res, next) {
   res.render('login');
-});
+
 
 router.get('/wallet', function(req, res, next) {
   res.render('./user/mywallet.ejs')
