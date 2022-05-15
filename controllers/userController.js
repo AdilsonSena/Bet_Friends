@@ -13,8 +13,11 @@ module.exports = {
                 req.flash('errors', errors.mapped());
                 req.flash('values', req.body);
                 
-                 return  res.redirect('/home').render('home');
+               // res.status(400).json({ errors: errors.mapped() }); 
+                 res.redirect('/sign-up');
+                 return;
             }
+
             const {
                 username,
                 name,
@@ -29,6 +32,7 @@ module.exports = {
 
             if (user) {
                 res.status(401).json({ message: 'Usuário já cadastrado nesse email' });
+                return;
 
             } else {
 
@@ -43,11 +47,12 @@ module.exports = {
                     cpf,
                     birthDate
                 });
-                return res.redirect([status], path);
-
+                res.redirect("/login");
+                return;
             }
         } catch (error) {
-            return res.status(400).json(error);
+             res.status(400).json(error)
+             return;
         }
 
     },

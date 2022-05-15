@@ -12,8 +12,12 @@ router.get('/logged', function(req, res, next) {
   res.render('loggedHome');
 });
 
-router.get('/home1', function(req, res, next) {
-  res.render('./partials/header');
+router.get('/sign-up', function(req, res, next) {
+  res.render('sign-up');
+})
+
+router.get('/login', function(req, res, next) {
+  res.render('login');
 });
 
 router.get('/wallet', function(req, res, next) {

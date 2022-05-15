@@ -12,8 +12,10 @@ const loginController = {
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
 
-            return res.redirect('/login');
+            res.redirect('/login');
+            return;
         }
+
         const { email, password } = req.body;
         const user = await userModel.findOne({ where: { email } });
 
@@ -23,7 +25,7 @@ const loginController = {
 
                 if (isPasswordCorrect) {
                     req.session.user = user;
-                    return res.redirect('/config').render('/users/config',{ user: {
+                    res.redirect('/config').render('/users/config',{ user: {
                         username: user.username,
                         name: user.name,
                         lastName: user.lastName,
@@ -32,11 +34,12 @@ const loginController = {
                         birthDate: user.birthDate,
                         
                     } });
-
+                    return ;
                 }
             }
         } catch (error) {
-            return res.status(400).json(error);
+             res.status(400).json(error)
+             return;
         }
     }
 };

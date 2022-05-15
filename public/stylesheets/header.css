@@ -335,7 +335,10 @@ div.modal-header {
   margin-left: 15px;
 }
 
-h5>img {
+h5 > img {
+  margin: 30px auto 30px 0px;
+}
+h5 > img.img-signup {
   margin: 30px auto 30px 180px;
 }
 
@@ -793,4 +796,11 @@ div.modal-header {
 
 .form small.last{
   margin-left: 5px;
+}
+
+.form-log small{
+  color: red;
+  white-space: nowrap;
+  margin-left: 38px;
+  margin-top: -50px;
 }
