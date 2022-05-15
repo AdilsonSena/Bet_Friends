@@ -2,6 +2,7 @@ const { body } = require('express-validator');
 const userModel = require('../../database/models/user');
 const sequelize = require('sequelize');
 
+
 const registerValidator = [
     body('username')
     .notEmpty()
@@ -17,11 +18,9 @@ const registerValidator = [
 
     body('email')
     .notEmpty()
-    .bail()
     .withMessage('O campo email é obrigatório')
     .isEmail()
     .withMessage('Digite um endereço de email válido')
-    .bail()
     .custom(async (value, { req }) => {
         const user = await userModel.findOne({ where: { email: value } });
         if (user) {
@@ -59,13 +58,7 @@ const registerValidator = [
     .notEmpty()
     .bail()
     .withMessage('O campo data de nascimento é obrigatório')
-    .custom((value, { req }) => {
-            const date18YrsAgo = new Date();
-            date18YrsAgo.setFullYear(date18YrsAgo.getFullYear() - 18);
-            
-            return value <= date18YrsAgo;
-         
-    })
+    .isBefore('2004-01-01')
     .withMessage('Você precisa ter mais de 18 anos para se cadastrar'),
 ]
 
