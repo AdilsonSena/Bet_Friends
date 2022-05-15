@@ -12,8 +12,10 @@ const loginController = {
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
 
+
             res.redirect('/login');
             return;
+
         }
 
         const { email, password } = req.body;
@@ -25,7 +27,10 @@ const loginController = {
 
                 if (isPasswordCorrect) {
                     req.session.user = user;
+
+
                     res.redirect('/config').render('/users/config',{ user: {
+
                         username: user.username,
                         name: user.name,
                         lastName: user.lastName,
@@ -34,12 +39,14 @@ const loginController = {
                         birthDate: user.birthDate,
                         
                     } });
+
                     return ;
                 }
             }
         } catch (error) {
              res.status(400).json(error)
              return;
+
         }
     }
 };
