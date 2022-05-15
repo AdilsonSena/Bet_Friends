@@ -3,7 +3,6 @@ const userModel = require('../../database/models/user');
 const sequelize = require('sequelize');
 
 
-
 const registerValidator = [
     body('username')
     .notEmpty()
