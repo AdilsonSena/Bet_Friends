@@ -12,8 +12,7 @@ module.exports = {
             if (!errors.isEmpty()) {
                 req.flash('errors', errors.mapped());
                 req.flash('values', req.body);
-                
-               // res.status(400).json({ errors: errors.mapped() }); 
+
                  res.redirect('/sign-up');
                  return;
             }
@@ -47,6 +46,7 @@ module.exports = {
                     cpf,
                     birthDate
                 });
+
                 res.redirect("/login");
                 return;
             }
