@@ -3,6 +3,7 @@ const userModel = require('../../database/models/user');
 const sequelize = require('sequelize');
 
 
+
 const registerValidator = [
     body('username')
     .notEmpty()
@@ -51,7 +52,13 @@ const registerValidator = [
     .bail()
     .withMessage('O campo cpf é obrigatório')
     .isLength({min: 11})
-    .withMessage('O cpf deve ter 11 caracteres'),
+    .withMessage('O cpf deve ter 11 caracteres')
+    .custom(async (value, { req }) => {
+        const user = await userModel.findOne({ where: { cpf: value } });
+        if (user) {
+            throw new Error('Este cpf já está cadastrado');
+        }
+    }),
     
 
     body('birthDate')
