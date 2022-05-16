@@ -2,25 +2,17 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('users_autorizados', {
+    await queryInterface.createTable('clube_casa', {
       id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true
       },
-      id_autorizacoes: {
+      id_clube: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'autorizacoes',
-          key: 'id'
-        }
-      },
-      id_apostas_personalizadas: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'apostas_personalizadas',
+          model: 'clube',
           key: 'id'
         }
       },
@@ -36,6 +28,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) =>{
-     await queryInterface.dropTable('users_autorizados');
+     await queryInterface.dropTable('clube_casa');
+     
   }
 };

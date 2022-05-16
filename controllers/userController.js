@@ -12,7 +12,7 @@ module.exports = {
             if (!errors.isEmpty()) {
                 req.flash('errors', errors.mapped());
                 req.flash('values', req.body);
-              
+
                  res.redirect('/sign-up');
                  return;
             }
@@ -32,7 +32,7 @@ module.exports = {
             if (user) {
                 res.status(401).json({ message: 'Usuário já cadastrado nesse email' });
                 return;
-              
+
             } else {
 
                 const hash = await bcrypt.hashSync(password, 10);

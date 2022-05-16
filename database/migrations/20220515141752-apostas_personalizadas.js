@@ -1,34 +1,42 @@
-"use strict";
+'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("apostas_personalizadas", {
-      id_apostas_personalizadas: {
+    await queryInterface.createTable('apostas_personalizadas', {
+      id: {
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true
+      },
+      titulo_aposta_personalizada: {
+        type: Sequelize.STRING(100),
+        allowNull: false
+      },
+      regras_apostas_personalizadas: {
+        type: Sequelize.STRING(200),
+        allowNull: false
+      },
+      valor_apostas: {
         type: Sequelize.INTEGER,
-        primaryKey: true,
-        allowNull: false,
-        autoIncrement: true,
+        allowNull: false
       },
-      titulo_personalizadas: {
-        type: Sequelize.STRING(150),
-        allowNull: false,
+      data_aposta: {
+        type: Sequelize.DATE,
+        allowNull: false
       },
-      regras_personalizadas: {
-        type: Sequelize.STRING(150),
+      createdAt: {
+        type: Sequelize.DATE,
         allowNull: false,
       },
-      valor_personalizadas: {
-        type: Sequelize.FLOAT,
-        allowNull: false,
-      },
-      data_personalizadas: {
+      updatedAt: {
         type: Sequelize.DATE,
         allowNull: false,
       },
     });
   },
 
-  async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("apostas_personalizadas");
-  },
+  down: async (queryInterface, Sequelize) =>{
+     await queryInterface.dropTable('apostas_personalizadas');
+     
+  }
 };
