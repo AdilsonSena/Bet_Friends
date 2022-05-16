@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+    --darkpurple-color: #190642;
+    --lightpurple-color:#5D33B3;
+    --yellow-color: #FED501;
+    --lightblue-color: #A0CED2;
+    --blue-color: #56C5D0;
+}
+*{
+    font-family: 'Roboto';
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-color);
+    width: 100vw;
+    padding-bottom: 1rem;
+}
+main > h1{
+    font-size: 1.5rem;
+    color: var(--darkpurple-color);
+    padding: .5rem .5rem .5rem .5rem;
+    text-shadow: 3px 1px 2px #4a21ff44 ;
+}
+main > div.optperfil{
+    width: 100vw;
+}
+main > div.optperfil > div.options{
+    display: none;
+    background-color: var(--yellow-color);
+    width: 220px;
+    border-radius: 7px;
+    max-height: 160px;
+}
+
+main > div.optperfil > div.options > ul{
+    list-style: none;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+main > div.optperfil > div.options > ul > li{
+    margin-bottom: 10px;
+}
+main > div.optperfil > div.options > ul > li > a{
+    text-decoration: none;
+    color: #190642;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+main > .optperfil > .coluna2{
+    border-radius: 10px;
+}
+main > .optperfil > .coluna2 > .historico{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkpurple-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+main > .optperfil > .coluna2 > .historico > .wallet{
+    display: flex;
+    justify-content: space-between;
+} 
+main > .optperfil > .coluna2 > .historico > .wallet > .wallet-left > h2{
+    color: var(--yellow-color);
+    margin-top: 20px;
+    font-size: 1.2rem;
+    margin-left: 30px;
+}
+main > .optperfil > .coluna2 > .historico > .wallet > .wallet-left > p{
+    color: black;
+    margin-left: 30px;
+    background-color: var(--lightblue-color);
+    border-radius: 5px;
+    max-width: 180px;
+}
+
+main > .optperfil > .coluna2 > .historico > .wallet > .wallet-left > p > img{
+    margin-right: 1rem;
+    background-color: var(--darkpurple-color);
+    padding:6px;
+}
+main > .optperfil > .coluna2 > .historico > .wallet > .wallet-right{
+    margin-top: 20px;
+    margin-right: 1rem;
+}
+main > .optperfil > .coluna2 > .historico > .wallet > .wallet-right > p.pendente{
+    color: var(--yellow-color);
+}
+
+main > .optperfil > .coluna2 > .historico > .wallet > .wallet-right > p.valor{
+    color: var(--yellow-color);
+    margin-top: -10px;
+    margin-left:85px;
+}
+
+main > .optperfil > .coluna2 > .historico > table{
+    color: var(--yellow-color);
+    border: 1px solid;
+    text-align: center;
+    margin: auto;
+    font-size: 14px;
+}
+main > .optperfil > .coluna2 > .historico > table, td{
+    border: 1px solid var(--yellow-color);
+}
+main > .optperfil > .coluna2 > .saque{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkpurple-color);
+    padding: 1rem;
+    border-radius: 6px;
+}
+main > .optperfil > .coluna2 > .saque > h2{
+    color: var(--yellow-color);
+}
+main > .optperfil > .coluna2 > .saque > p{
+    color: var(--yellow-color);
+    margin: .4rem auto .4rem auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+main > .optperfil > .coluna2 > .saque > img{
+    width: 140px;
+    margin: 1rem auto 1rem auto;
+}
+main > .optperfil > .coluna2 > .saque > ul{
+    color: var(--yellow-color);
+    margin: auto;
+    list-style: none;
+    margin-top: 2rem;
+}
+main > .optperfil > .coluna2 > .saque > ul >li{
+    text-align: center;
+}
+main > .optperfil > .coluna2 > .saque > button.confirmar{   
+    color: var(--yellow-color);
+    background-color: var(--darkpurple-color);
+    border: 2px solid var(--yellow-color);
+    border-radius: 16px;
+    width: 115px;
+    margin: 2rem auto 1rem auto;
+    white-space: nowrap;
+    font-size: .825rem;
+}
+main > .optperfil > .coluna2 > .saque > button.sacar{
+    color: var(--darkpurple-color);
+    border: none;
+    background-color: var(--yellow-color);
+    border-radius: 5px;
+    height: 2rem;
+    width: 130px;
+    margin: 1rem auto 1rem auto;
+}
+main > .optperfil > .coluna2 > .saque > button.sacar:hover{
+    background-color: #feae01;
+}
+main > div.optperfil >div.coluna2 > .ldeposito > h2{
+    color: var(--yellow-color);
+    margin-left: 30px;
+    padding-top: 30px ;
+}
+
+main > div.optperfil >div.coluna2 > .ldeposito > ul{
+    margin-left: 15px;
+    width: 85%;
+}
+
+main > div.optperfil >div.coluna2 > .ldeposito > ul > li{
+    color: white;
+    font-size: .9rem;
+    margin-top: 1rem;
+}
+main > div.optperfil >div.coluna2> .ldeposito{
+    background-color: var(--darkpurple-color);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+main > div.optperfil >div.coluna2> .ldeposito > h4{
+    color: var(--yellow-color);
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+main > div.optperfil >div.coluna2> .ldeposito > div.inputs{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+main > div.optperfil >div.coluna2> .ldeposito > div.inputs > .input1{
+    width:60%;
+    margin-right: .6rem;
+}
+main > div.optperfil >div.coluna2> .ldeposito > div.inputs > .input1 > span{
+    color: var(--darkpurple-color);
+    background-color: var(--lightblue-color);
+    border-color: var(--darkpurple-color);
+}
+main > div.optperfil >div.coluna2> .ldeposito > div.inputs > .input1 > input{
+    background-color: var(--lightblue-color);
+    border-color: var(--darkpurple-color);
+}
+
+main > div.optperfil >div.coluna2> .ldeposito > div.inputs > .input2 {
+    width:36%;
+    
+    border-color: var(--darkpurple-color);
+}
+main > div.optperfil >div.coluna2 > .ldeposito > div.inputs > .input2 > input{
+    background-color: var(--lightblue-color);
+    border-color: var(--darkpurple-color);
+}
+main > div.optperfil >div.coluna2> .ldeposito > div.inputs > .input2 > button{
+    background-color: var(--lightblue-color);
+}
+
+main > div.optperfil >div.coluna2> .ldeposito > div.input3 {
+    margin-left: 5%;
+    width: 87.5%;
+   
+}
+main > div.optperfil >div.coluna2 > .ldeposito > div.input3 > input{
+    background-color: var(--lightblue-color);
+} 
+main > div.optperfil >div.coluna2 > .ldeposito > div.input3 > button{
+    background-color: var(--lightblue-color);
+} 
+
+main > div.optperfil >div.coluna2> .ldeposito > button{
+    color: #190642;
+    background-color: var(--yellow-color);
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: -20px 8px 20px 30px;
+    padding: .5rem .6rem .5rem .6rem;
+    white-space: nowrap;
+    margin-top: 1rem;
+}
+main > div.optperfil >div.coluna2 > .ldeposito > button{
+    color: #190642;
+    background-color: var(--yellow-color);
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: -20px 8px 20px 30px;
+    padding: .5rem .6rem .5rem .6rem;
+    white-space: nowrap;
+    margin-top: 1rem;
+}
+main > div.optperfil >div.coluna2 > .depositos{
+    background-color: var(--darkpurple-color);
+    margin-top: 2rem;
+    border-radius: 6px;
+    padding: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main > div.optperfil >div.coluna2 > .depositos > h2{
+    color: var(--yellow-color);
+    margin-left: 30px;
+    margin-top: 20px;
+}
+main > div.optperfil >div.coluna2 > .depositos > p{
+    color: var(--yellow-color);
+    margin: auto;
+    text-align: center;
+    max-width: 700px;
+}
+main > div.optperfil >div.coluna2 > .depositos > img{
+    margin: 1rem auto 1rem auto;
+    
+}
+main > div.optperfil >div.coluna2 > .depositos > button.confirmar{
+    color: var(--yellow-color);
+    background-color: var(--darkpurple-color);
+    border: 2px solid var(--yellow-color);
+    border-radius: 16px;
+    width: 115px;
+    margin: 1rem auto 1rem auto;
+    white-space: nowrap;
+    font-size: .825rem;
+}
+main > div.optperfil >div.coluna2 > .depositos > ul{
+    color: var(--yellow-color);
+    text-align: center;
+    list-style: none;
+    margin-top: 30px;
+}
+main > .optperfil > .coluna2 > .depositos > button.sacar{
+    color: var(--darkpurple-color);
+    border: none;
+    background-color: var(--yellow-color);
+    border-radius: 5px;
+    height: 2rem;
+    width: 130px;
+    margin: 1rem auto 1rem auto;
+}
+main > .optperfil > .coluna2 > .depositos > button.sacar:hover{
+    background-color: #feae01;
+}
+
+@media (min-width: 690px){
+    main > h1{
+        display: none;
+    }
+    main > div.optperfil{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
+
+    main > div.optperfil > div.options {
+        display: flex;
+        margin-right: 5vw;
+        margin-left: 10vw;
+    }
+    main .optperfil > .coluna2{
+        width: 60vw;
+    }
+    main > div.optperfil >div.coluna2 > .ldeposito > button{
+        margin-left: 5%;
+    }
+
+}
