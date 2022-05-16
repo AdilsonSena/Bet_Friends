@@ -1,3 +1,4 @@
+
 'use strict';
 
 module.exports = {
@@ -31,4 +32,5 @@ module.exports = {
      await queryInterface.dropTable('campeonato');
      
   }
+
 };
