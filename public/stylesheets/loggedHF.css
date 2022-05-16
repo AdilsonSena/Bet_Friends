@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+    --darkpurple-color: #190642;
+    --lightpurple-color:#5D33B3;
+    --yellow-color: #FED501;
+    --lightblue-color: #A0CED2;
+    --blue-color: #56C5D0;
+}
+*{
+    font-family: 'Roboto';
+}
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkpurple-color);
+    height: 8vh;
+    min-height: 80px;
+    box-shadow: 2px 1px 1px 1px gray;
+    box-sizing: border-box;
+}
+
+header > img{
+    min-width: 8vw;
+    padding: .825rem .825rem .825rem .825rem;
+}
+
+header  > .dropdown{    
+    display: flex;
+    margin-left: 50vw;
+    padding: initial ;
+    background-color:var(--darkpurple-color);
+    position: relative;
+    border: none;
+}
+header > .dropdown > .btn{
+    color: #190642;
+    background-color: #190642;
+    border: none;
+    
+} 
+
+.dropdown-toggle::after{
+    content: none;
+    border: none;
+}
+
+
+header > .dropdown > ul.dropdown-menu{
+    background-color: var(--yellow-color);
+    font-size: 1.2rem;
+    width: 100vw;
+}
+header > .dropdown > ul.dropdown-menu > li> a.dropdown-item:hover{
+    background-color: var(--darkpurple-color);
+    color: #FED501;
+}
+
+nav.navbar{
+    display: flex;
+    margin-left: -40px;
+    flex-wrap: nowrap;
+    
+}
+
+nav.navbar a {
+    display: none;
+    margin-right: 3vw;
+    text-decoration: none;
+    color: #FED501;
+    font-weight: 500;
+    font-size: 14px;
+}
+nav.navbar > input {
+    display: none;
+    width: 180px;
+    border: 1px solid var(--lightpurple-color);
+    height: 32px;  
+    padding: 0 30px 0 12px;   
+    border-radius: 5px; 
+    font-size: .825rem;
+    background: var(--yellow-color) url("./images/search.svg") no-repeat 160px center; 
+}
+
+nav.navbar-right > a.apostas {
+    color: var(--yellow-color);
+    text-decoration: none;
+    font-size: 0.825rem;
+    margin-right: 1.5rem;
+    white-space: nowrap;
+}
+nav.navbar-right > .btn-group > ul.dropdown-menu{
+    background-color: var(--yellow-color);
+}
+nav.navbar-right > .btn-group > ul.dropdown-menu > li > a:hover {
+    background-color: #190642;
+    color: var(--yellow-color);
+}
+nav.navbar-right > .btn-group > ul.dropdown-menu > li > a {
+    text-decoration: none;
+    color: var(--darkpurple-color);
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+nav.navbar-right .btn-group button.btn{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--yellow-color);
+    margin-right: 2vw;
+    
+}
+
+nav.navbar-right .btn img{
+    align-items: center;
+    margin-left: -4px;
+}
+
+
+nav.navbar-right{
+   padding: 0 0 0 -20px;
+    display: none;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+
+
+@media (min-width: 690px){
+    nav.navbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav.navbar a{
+        display: flex;
+    }
+    nav.navbar-right{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        max-width: 180px;
+        margin-right: 10px;
+    }
+    header > .dropdown {
+        display: none;
+    }
+    nav.navbar > input {
+        display: none;
+    }
+    
+}
+
+@media(min-width:690px){
+    nav.navbar > input {
+        display: flex;
+    }
+
+}
+@media(min-width:890px){
+    
+    nav.navbar > input {
+        display: flex;
+        width: 220px;
+        background: var(--yellow-color) url("images/search.svg") no-repeat 190px center;
+    }
+}

@@ -1,0 +1,806 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  background: var(--darkpurple-color);
+}
+
+:root {
+  --darkpurple-color: #190642;
+  --lightpurple-color: #5D33B3;
+  --yellow-color: #FED501;
+  --lightblue-color: #A0CED2;
+  --blue-color: #56C5D0;
+}
+
+* {
+  font-family: 'Roboto';
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkpurple-color);
+  height: 8vh;
+  min-height: 80px;
+  box-shadow: 2px 1px 4px 4px #170a33;
+  box-sizing: border-box;
+}
+
+header>img {
+  min-width: 8vw;
+  padding: .825rem .825rem .825rem .825rem;
+  cursor: pointer;
+}
+
+header nav.navbar {
+  display: flex;
+  margin-left: -40px;
+  flex-wrap: nowrap;
+
+}
+
+header nav.navbar a {
+  display: none;
+  margin-right: 3vw;
+  text-decoration: none;
+  color: #FED501;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+header nav.navbar>input {
+  display: none;
+  width: 180px;
+  border: 1px solid var(--lightpurple-color);
+  height: 32px;
+  padding: 0 30px 0 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  background: var(--yellow-color) url("../images/search.svg") no-repeat 160px center;
+}
+
+header nav.navbar>input> ::placeholder {
+  color: black;
+  z-index: 10;
+}
+
+form input::placeholder {
+  color: rgb(27, 27, 27);
+}
+
+header nav.navbar-right {
+  padding-right: 20px;
+}
+
+header nav.navbar-right a {
+  text-decoration: none;
+  color: #FED501;
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+header nav.navbar-right button {
+  height: 32px;
+  color: var(--darkpurple-color);
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #FED501;
+  border: none;
+  border-radius: 5px;
+}
+
+header nav.navbar-right {
+  padding: 0 0 0 -20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 2vw;
+}
+
+@media (min-width: 690px) {
+  header nav.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header nav.navbar a {
+    display: flex;
+  }
+
+  header nav.navbar-right {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    max-width: 180px;
+    margin-right: 10px;
+  }
+
+  header nav.navbar>input {
+    display: none;
+  }
+
+}
+
+@media(min-width:690px) {
+  header nav.navbar>input {
+    display: flex;
+  }
+
+
+}
+
+@media(min-width:890px) {
+
+  header nav.navbar>input {
+    display: flex;
+    width: 220px;
+    background: var(--yellow-color) url("images/search.svg") no-repeat 190px center;
+  }
+}
+
+.modal-content {
+  background: linear-gradient(179.92deg, #190642 52.89%, #2d0c76 99.93%);
+}
+
+div.modal-header {
+  display: flex;
+  align-self: center;
+  border-bottom: none;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.apelido {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.apelido-esp {
+  width: 380px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-left: 2vw;
+}
+
+.apelido-info {
+  display: flex;
+  align-self: center;
+  margin-left: 2vw;
+  color: #fed501;
+  font-size: 1rem;
+}
+
+.nome-e-sobrenome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nome-real {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 7px;
+  color: #fed501;
+  grid-column: 1;
+}
+
+.nome-real-esp {
+  width: 180px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-left: 7px;
+  grid-column: 1;
+}
+
+.sobrenome-real {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: #fed501;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.sobrenome-real-esp {
+  width: 175px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-left: 5px;
+  grid-column: 2;
+}
+
+.info-nome-e-sobrenome {
+  display: flex;
+  align-self: center;
+  margin-left: 2vw;
+  width: 87.5%;
+  color: #fed501;
+  font-size: 1rem;
+  grid-column: 1 / 3;
+}
+
+.email-valido {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.email-valido-esp,
+.gerando-senha,
+.dia-do-aniversario {
+  width: 380px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 2vw;
+}
+
+.info-senha {
+  display: block;
+  align-self: center;
+  margin-bottom: 25px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.info-senha-ul {
+  display: block;
+  align-self: center;
+  margin-bottom: 25px;
+  margin-left: 2.1vw;
+  color: #fed501;
+}
+
+.aniversario-label {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.dia-do-aniversario2 {
+  display: block;
+  align-self: center;
+  margin-bottom: 25px;
+  margin-left: 2vw;
+  color: #fed501;
+  font-size: 1rem;
+}
+
+.checkbox-cadastro-do-cliente {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 15px 0;
+}
+
+.checkbox-cadastro {
+  display: grid;
+  align-self: center;
+  justify-self: end;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.checkbox-label-cadastro-do-cliente {
+  display: block;
+  align-self: center;
+  margin-left: 2vw;
+  color: #fed501;
+  grid-column: 2;
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.btn.btn-secondary {
+  background: #5d33b3;
+  border-radius: 3px;
+  color: #fed501;
+  border: none;
+  padding: 10px 40px;
+}
+
+.icones-de-rede-social-rachel {
+  margin-bottom: 50px;
+}
+
+.icones-de-rede-social-rachel>img {
+  margin-left: 15px;
+}
+
+h5 > img {
+  margin: 30px auto 30px 0px;
+}
+h5 > img.img-signup {
+  margin: 30px auto 30px 180px;
+}
+
+.form .modal-header button {
+  position: relative;
+  margin-top: -150px;
+  fill: var(--yellow-color);
+}
+.form p.dia-do-aniversario2{
+  width: 80%;
+}
+.form label.checkbox-label-cadastro-do-cliente{
+  width: 80%;
+}
+
+/* modal pop up login */
+
+.modal-content {
+  background: linear-gradient(179.92deg, #190642 52.89%, #2d0c76 99.93%);
+}
+
+div.modal-header {
+  display: flex;
+  align-self: center;
+  border-bottom: none;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.login-email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.login-email-esp {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-bottom: 15px;
+  margin-left: 2vw;
+}
+
+.senha-email-esp {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-bottom: 35px;
+  margin-left: 2vw;
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.btn.btn-secondary {
+  background: #5d33b3;
+  border-radius: 3px;
+  color: #fed501;
+  border: none;
+  padding: 10px 40px;
+}
+
+.icones-de-rede-social-rachel {
+  margin-bottom: 50px;
+}
+
+/* responsivo rachel */
+@media (min-width: 1400px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 890px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 690px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+/*rachel*/
+.modal-content {
+  background: linear-gradient(179.92deg, #190642 52.89%, #2d0c76 99.93%);
+}
+
+div.modal-header {
+  display: flex;
+  align-self: center;
+  border-bottom: none;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.apelido {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.apelido-esp {
+  width: 380px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-left: 2vw;
+}
+
+.apelido-info {
+  display: flex;
+  align-self: center;
+  margin-left: 2vw;
+  color: #fed501;
+  font-size: 1rem;
+}
+
+.nome-e-sobrenome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nome-real {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 7px;
+  color: #fed501;
+  grid-column: 1;
+}
+
+.nome-real-esp {
+  width: 180px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-left: 7px;
+  grid-column: 1;
+}
+
+.sobrenome-real {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  color: #fed501;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.sobrenome-real-esp {
+  width: 175px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-left: 5px;
+  grid-column: 2;
+}
+
+
+.info-nome-e-sobrenome {
+  display: flex;
+  align-self: center;
+  margin-left: 2vw;
+  color: #fed501;
+  font-size: 1rem;
+  grid-column: 1 / 3;
+}
+
+.email-valido {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.email-valido-esp,
+.gerando-senha,
+.dia-do-aniversario {
+  width: 380px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 2vw;
+}
+
+.info-senha {
+  display: block;
+  align-self: center;
+  margin-bottom: 25px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.info-senha-ul {
+  display: block;
+  align-self: center;
+  margin-bottom: 25px;
+  margin-left: 2.1vw;
+  color: #fed501;
+}
+
+.aniversario-label {
+  display: block;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.dia-do-aniversario2 {
+  display: block;
+  align-self: center;
+  margin-bottom: 25px;
+  margin-left: 2vw;
+  color: #fed501;
+  font-size: 1rem;
+}
+
+.checkbox-cadastro-do-cliente {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 15px 0;
+}
+
+.checkbox-cadastro {
+  display: grid;
+  align-self: center;
+  justify-self: end;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.checkbox-label-cadastro-do-cliente {
+  display: block;
+  align-self: center;
+  margin-left: 2vw;
+  color: #fed501;
+  grid-column: 2;
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.btn.btn-secondary {
+  background: #5d33b3;
+  border-radius: 3px;
+  color: #fed501;
+  border: none;
+  padding: 10px 40px;
+}
+
+.icones-de-rede-social-rachel {
+  margin-bottom: 50px;
+}
+
+.icones-de-rede-social-rachel>img {
+  margin-left: 15px;
+}
+
+/* modal pop up login */
+
+.modal-content {
+  background: linear-gradient(179.92deg, #190642 52.89%, #2d0c76 99.93%);
+}
+
+div.modal-header {
+  display: flex;
+  align-self: center;
+  border-bottom: none;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.login-email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  margin-left: 2vw;
+  color: #fed501;
+}
+
+.login-email-esp {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-bottom: 15px;
+  margin-left: 2vw;
+}
+
+.senha-email-esp {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  background: #56c5d0;
+  border: none;
+  margin-bottom: 35px;
+  margin-left: 2vw;
+}
+
+.modal-footer {
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.btn.btn-secondary {
+  background: #5d33b3;
+  border-radius: 3px;
+  color: #fed501;
+  border: none;
+  padding: 10px 40px;
+}
+
+.icones-de-rede-social-rachel {
+  margin-bottom: 50px;
+}
+
+/* responsivo rachel */
+@media (min-width: 1400px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 890px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 690px) {
+
+  .nome-real,
+  .nome-real-esp {
+    margin-left: 35px;
+  }
+
+  .sobrenome-real-esp,
+  .sobrenome-real {
+    margin-left: 15px;
+  }
+}
+
+.form small{
+  color: red;
+  margin-left: 40px;
+  white-space: nowrap;
+}
+
+.form small.last{
+  margin-left: 5px;
+}
+
+.form-log small{
+  color: red;
+  white-space: nowrap;
+  margin-left: 38px;
+  margin-top: -50px;
+}
