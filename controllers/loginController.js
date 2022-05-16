@@ -12,9 +12,9 @@ const loginController = {
             req.flash('errors', errors.mapped());
             req.flash('values', req.body);
 
-
             res.redirect('/login');
             return;
+
 
         }
 
