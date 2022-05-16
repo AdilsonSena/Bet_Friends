@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 
@@ -14,45 +15,43 @@ router.get('/logged', function(req, res, next) {
 
 router.get('/sign-up', function(req, res, next) {
   res.render('sign-up');
-})
+});
 
 router.get('/login', function(req, res, next) {
   res.render('login');
-
 });
-
 
 router.get('/wallet', function(req, res, next) {
   res.render('./user/mywallet.ejs')
-})
+});
 
 router.get('/about-us', function(req, res, next) {
   res.render('aboutUs')
-})
+});
 
 router.get('/404', function(req, res, next) {
   res.render('error')
-})
+});
 
 router.get('/saque', function(req, res, next) {
   res.render('./user/saque')
-})
+});
 
 router.get('/deposito-pix', function(req, res, next) {
   res.render('./user/depositoPix')
-})
+});
 
 router.get('/confirma-pix', function(req, res, next) {
   res.render('./user/confirmaPix')
-})
+});
 
 router.get('/deposito-boleto', function(req, res, next) {
   res.render('./user/depositoBoleto')
-})
+});
 
 router.get('/confirma-boleto', function(req, res, next) {
   res.render('./user/confirmarBoleto')
-})
+});
 
 router.get('/aposta-veterana', function(req, res, next) {
   res.render('./user/apostaVeterana')
@@ -60,11 +59,11 @@ router.get('/aposta-veterana', function(req, res, next) {
 
 router.get('/config', function(req, res, next) {
   res.render('./user/config')
-})
+});
 
 router.get('/aposta-responsavel', function(req, res, next) {
   res.render('./user/apostaResp')
-})
+});
 
 router.get('/aposta-final', function(req, res, next) {
   res.render('./user/apostaFinal')
