@@ -1,3 +1,4 @@
+
 const Sequelize = require("sequelize");
 const configDB = require("./config/config.js");
 const User = require("./models/user");
@@ -10,3 +11,4 @@ Campeonato.init(connection);
 Data.init(connection);
 
 module.exports = connection;
+

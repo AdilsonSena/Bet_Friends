@@ -1,33 +1,36 @@
-"use strict";
+
+'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("data", {
+    await queryInterface.createTable('data', {
       id: {
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true
       },
       horario: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: false
       },
       data_jogo: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: false
       },
       createdAt: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: false
       },
       updatedAt: {
         type: Sequelize.DATE,
-        allowNull: false,
-      },
+        allowNull: false
+      }
     });
   },
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("data");
-  },
+  down: async (queryInterface, Sequelize) =>{
+     await queryInterface.dropTable('data');
+     
+  }
+
 };
