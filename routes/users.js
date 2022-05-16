@@ -12,6 +12,8 @@ const controllerApostaHasJogo = require('../controllers/apostaHasJogoController'
 const controllerJogo = require('../controllers/jogoController')
 const controllerCampeonato = require("../controllers/campeonatoController");
 const controllerData = require("../controllers/dataController");
+const controllerCreateAposta = require('../controllers/createApostaController.js')
+
 
 
 /* GET users listing. */
@@ -19,6 +21,12 @@ router.get('/', controller.listUsers);
 router.post('/', registerValidator,controller.createUser);
 router.put('/:id', controller.updateUser);
 router.delete('/:id', controller.deleteUser);
+
+/* GET createAposta listing. */
+router.get('/createAposta', controllerCreateAposta.listCreateAposta);
+router.post('/createAposta', controllerCreateAposta.createCreateAposta);
+router.put('/createAposta/:id', controllerCreateAposta.updateCreateAposta);
+router.delete('/createAposta/:id', controllerCreateAposta.deleteCreateAposta);
 
 /*CRUD APOSTAS PERSONALIZADAS */
 router.post('/aposta/', apostaPController.createApostaPersonalizada);
@@ -75,5 +83,3 @@ router.put("/data/:id", controllerData.updateData);
 router.delete("/data/:id", controllerData.deleteData);
 
 module.exports = router;
-
-

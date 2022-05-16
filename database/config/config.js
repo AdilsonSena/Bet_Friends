@@ -1,4 +1,3 @@
-
 module.exports = {
   dialect: 'mysql',
   host: 'localhost',
@@ -9,6 +8,6 @@ module.exports = {
       timestamps: true,
       underscored: true,
   }
-}
 
+}
 

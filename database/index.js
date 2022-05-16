@@ -11,6 +11,7 @@ const Data = require("./models/data");
 const Aposta = require('./models/apostaPersonalizada');
 const Estadio = require('./models/estadio');
 const Clube = require('./models/clube');
+const CreateAposta = require('./models/createAposta')
 
 
 User.init(connection);
@@ -22,6 +23,6 @@ Data.init(connection);
 Aposta.init(connection);
 Estadio.init(connection);
 Clube.init(connection);
+CreateAposta.init(connection);
 
 module.exports = connection;
-
