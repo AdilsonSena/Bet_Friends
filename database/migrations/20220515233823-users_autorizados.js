@@ -2,27 +2,27 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('apostas_personalizadas', {
+    await queryInterface.createTable('users_autorizados', {
       id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true
       },
-      titulo_aposta_personalizada: {
-        type: Sequelize.STRING(100),
-        allowNull: false
-      },
-      regras_apostas_personalizadas: {
-        type: Sequelize.STRING(200),
-        allowNull: false
-      },
-      valor_apostas: {
+      id_autorizacoes: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'autorizacoes',
+          key: 'id'
+        }
       },
-      data_aposta: {
-        type: Sequelize.DATE,
-        allowNull: false
+      id_apostas_personalizadas: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'apostas_personalizadas',
+          key: 'id'
+        }
       },
       createdAt: {
         type: Sequelize.DATE,
@@ -36,7 +36,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) =>{
-     await queryInterface.dropTable('apostas_personalizadas');
-     
+     await queryInterface.dropTable('users_autorizados');
   }
 };
