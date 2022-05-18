@@ -1,47 +1,39 @@
-const {Model, DataTypes} = require('sequelize');
-
-class Jogo extends Model {
-  static init(sequelize) {
-    super.init({
-      id_data: {
+module.exports = (sequelize, DataTypes) => {
+  const Jogo = sequelize.define("jogo",
+    {
+      id: {
         type: DataTypes.INTEGER,
-        references: {
-          model: 'data',
-          key: 'id'
-        }},
-      id_campeonato: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'campeonato',
-          key: 'id'
-        }},
-      id_estadio: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'estadio',
-          key: 'id'
-        }},
+        autoIncrement: true,
+        primaryKey: true
+      },
       id_visitante: {
         type: DataTypes.INTEGER,
-        references: {
-          model: 'clube_visitante',
-          key: 'id'
-        }},
+      },
       id_casa: {
         type: DataTypes.INTEGER,
-        references: {
-          model: 'clube_casa',
-          key: 'id'
-        }},
-      createdAt: DataTypes.DATE,
-      updatedAt: DataTypes.DATE
-      }, {
-        tableName: 'jogo',
-        timestamps: true,
-        underscored: false,
-        sequelize
-      })
-  }
-};
+      },
+    },
+    {
+      tableName: 'jogo',
+      timestamps: false,
+    }
+  );
 
-module.exports = Jogo;
+  Jogo.associate = function (models) {
+
+    Jogo.belongsTo(models.Data, {
+      as: 'data',
+      foreignKey: 'ID_DATA',
+    });
+    Jogo.belongsTo(models.Campeonato, {
+      as: 'campeonato',
+      foreignKey: 'ID_CAMPEONATO',
+    });
+    Jogo.belongsTo(models.Estadio, {
+      as: 'estadio',
+      foreignKey: 'ID_ESTADIO',
+    });
+  }
+
+  return Jogo;
+};
