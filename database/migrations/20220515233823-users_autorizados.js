@@ -38,4 +38,8 @@ module.exports = {
   down: async (queryInterface, Sequelize) =>{
      await queryInterface.dropTable('users_autorizados');
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> master

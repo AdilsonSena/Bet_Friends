@@ -31,4 +31,5 @@ module.exports = {
      await queryInterface.dropTable('estadio');
      
   }
+
 };
