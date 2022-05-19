@@ -3,13 +3,13 @@ const {Model, DataTypes} = require('sequelize');
 class Autorizacao extends Model {
     static init(sequelize) {
         super.init({
-            nome: DataTypes.STRING(50),
-            createdAt: DataTypes.DATE,
-            updatedAt: DataTypes.DATE
+            id: {
+                type: DataTypes.INTEGER,
+                autoIncrement: true,
+                primaryKey: true
+              },
         }, {
             tableName: 'autorizacoes',
-            timestamps: true,
-            underscored: false,
             sequelize
         })
     }

@@ -8,8 +8,12 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
       },
-      id_apostas: {
+      id_jogo:{
         type: Sequelize.INTEGER,
+        references: {
+          model: 'jogo',
+          key: 'id'
+        }
       },
       odd_casas: {
         type: Sequelize.FLOAT,
@@ -20,11 +24,11 @@ module.exports = {
       odd_empate: {
         type: Sequelize.FLOAT,
       },
-      createAt: {
+      createdAt: {
         type: Sequelize.DATE,
         allowNull: false
       },
-      updateAt: {
+      updatedAt: {
         type: Sequelize.DATE,
         allowNull: false
       }
