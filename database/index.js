@@ -8,10 +8,12 @@ const Autorizacao = require('./models/autorizacao');
 const ApostaHasJogo = require('./models/apostaHasJogo');
 const Campeonato = require("./models/campeonato");
 const Data = require("./models/data");
-const Aposta = require('./models/apostaPersonalizada');
+const ApostaP = require('./models/apostaPersonalizada');
 const Estadio = require('./models/estadio');
 const Clube = require('./models/clube');
-const CreateAposta = require('./models/createAposta')
+
+const Aposta = require('./models/aposta')
+
 
 
 User.init(connection);
@@ -20,9 +22,11 @@ Autorizacao.init(connection);
 ApostaHasJogo.init(connection);
 Campeonato.init(connection);
 Data.init(connection);
-Aposta.init(connection);
+ApostaP.init(connection);
 Estadio.init(connection);
 Clube.init(connection);
-CreateAposta.init(connection);
+Aposta.init(connection);
+
+
 
 module.exports = connection;

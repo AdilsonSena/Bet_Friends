@@ -1,19 +1,18 @@
-const res = require('express/lib/response');
-const createApostaModel = require('../database/models/createAposta');
-
+const apostaModel = require('../database/models/aposta');
 
 module.exports = {
 createCreateAposta: async (req, res) => {
         try {
             const {
-                id_apostas, 
+                id_jogo, 
                 odd_casas,
                 odd_visitantes,
                 odd_empate
             }
             = req.body;
-            const createAposta = await createApostaModel.create({
-                id_apostas, 
+          
+            const createAposta = await apostaModel.create({
+                id_jogo, 
                 odd_casas,
                 odd_visitantes,
                 odd_empate 
@@ -27,10 +26,7 @@ createCreateAposta: async (req, res) => {
     },
     listCreateAposta: async (req, res) => {
         try {
-            
-            const createAposta = await createApostaModel.findAll(
-                
-            );
+            const createAposta = await apostaModel.findAll();
             res.status(200).json(createAposta);
             return;
         } catch (error) {
@@ -42,14 +38,16 @@ createCreateAposta: async (req, res) => {
         try {
             const { id } = req.params;
             const {
-                id_apostas, 
+
+                id_jogo, 
+
                 odd_casas,
                 odd_visitantes,
                 odd_empate
             }
             = req.body;
-            const createAposta = await createApostaModel.update({
-                id_apostas, 
+            const createAposta = await apostaModel.update({
+                id_jogo, 
                 odd_casas,
                 odd_visitantes,
                 odd_empate 
@@ -67,7 +65,8 @@ createCreateAposta: async (req, res) => {
     deleteCreateAposta: async (req, res) => {
         try {
             const { id } = req.params;
-            const createAposta = await createApostaModel.destroy({
+            const createAposta = await apostaModel.destroy({
+
                 where: { id } 
             }
                 
