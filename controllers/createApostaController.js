@@ -10,6 +10,7 @@ createCreateAposta: async (req, res) => {
                 odd_empate
             }
             = req.body;
+          
             const createAposta = await apostaModel.create({
                 id_jogo, 
                 odd_casas,
@@ -25,10 +26,7 @@ createCreateAposta: async (req, res) => {
     },
     listCreateAposta: async (req, res) => {
         try {
-            
-            const createAposta = await apostaModel.findAll(
-                
-            );
+            const createAposta = await apostaModel.findAll();
             res.status(200).json(createAposta);
             return;
         } catch (error) {
@@ -40,7 +38,9 @@ createCreateAposta: async (req, res) => {
         try {
             const { id } = req.params;
             const {
+
                 id_jogo, 
+
                 odd_casas,
                 odd_visitantes,
                 odd_empate
@@ -66,6 +66,7 @@ createCreateAposta: async (req, res) => {
         try {
             const { id } = req.params;
             const createAposta = await apostaModel.destroy({
+
                 where: { id } 
             }
                 

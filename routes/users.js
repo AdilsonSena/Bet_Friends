@@ -5,6 +5,12 @@ const controller = require('../controllers/userController');
 const registerValidator = require('../middlewares/validators/registerValidator');
 const controllerUserAutorizado = require('../controllers/userAutorizadoController');
 const controllerAutorizacao = require('../controllers/autorizacaoController')
+const controllerApostaHasJogo = require('../controllers/apostaHasJogoController')
+const controllerJogo = require('../controllers/jogoController')
+const controllerCampeonato = require("../controllers/campeonatoController");
+const controllerData = require("../controllers/dataController");
+const controllerCreateAposta = require('../controllers/createApostaController.js')
+
 
 /* GET users listing.*/
 router.get('/', controller.listUsers);
@@ -23,6 +29,5 @@ router.get('/autorizacoes', controllerAutorizacao.listAutorizacoes)
 router.post('/autorizacoes', controllerAutorizacao.createAutorizacao)
 router.put('/autorizacoes/:id', controllerAutorizacao.updateAutorizacao)
 router.delete('/autorizacoes/:id', controllerAutorizacao.deleteAutorizacao)
-
 
 module.exports = router;
