@@ -10,6 +10,8 @@ class User extends Model {
             password: DataTypes.STRING(200),
             cpf: DataTypes.STRING(11),
             birthDate: DataTypes.DATE,
+            type: DataTypes.STRING(20),
+            saldo: DataTypes.DECIMAL(10, 2),
             createdAt: DataTypes.DATE,
             updatedAt: DataTypes.DATE
         }, {
@@ -18,6 +20,13 @@ class User extends Model {
             underscored: false,
             sequelize
         })
+    };
+    static associate = models => {
+        this.belongsToMany(models.apostas, {
+            through: 'apostas_users',
+            foreignKey: 'user_id',
+            otherKey: 'aposta_id',
+        });
     }
 }
 

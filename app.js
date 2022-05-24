@@ -9,14 +9,8 @@ var flash = require('connect-flash');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
-var apostasPRouter = require('./routes/apostaPersonalizada')
-var estadioRouter = require('./routes/estadio')
-var createAposta = require('./routes/createAposta')
-var clubeRouter = require('./routes/clubes')
-var apostasHasJogoRouter = require('./routes/apostasHasJogo')
-var jogoRouter = require('./routes/jogo')
-var campeonatoRouter = require('./routes/campeonato')
-var dataRouter = require('./routes/data')
+var apostas = require('./routes/apostas');
+var apostasUser = require('./routes/apostasUser');
 
 var app = express();
 
@@ -51,14 +45,8 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', loginRouter);
-app.use('/', apostasPRouter);
-app.use('/', estadioRouter);
-app.use('/', createAposta);
-app.use('/', clubeRouter);
-app.use('/', apostasHasJogoRouter);
-app.use('/', jogoRouter);
-app.use('/', campeonatoRouter);
-app.use('/', dataRouter);
+app.use('/', apostas);
+app.use('/', apostasUser);
 
 require('./database')
 
