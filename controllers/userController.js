@@ -24,6 +24,7 @@ module.exports = {
                 email,
                 password,
                 cpf,
+                type,
                 birthDate
             } = req.body;
 
@@ -44,6 +45,7 @@ module.exports = {
                     email,
                     password: hash,
                     cpf,
+                    type,
                     birthDate
                 });
 
@@ -74,6 +76,7 @@ module.exports = {
                 email,
                 password,
                 cpf,
+                type,
                 birthDate
             } = req.body;
             const user = await userModel.findOne({ where: { id } });
@@ -86,6 +89,7 @@ module.exports = {
                     email,
                     password,
                     cpf,
+                    type,
                     birthDate
                 }, {
                     where: { id }

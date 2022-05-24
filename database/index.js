@@ -3,6 +3,7 @@ const configDB = require('./config/config.js');
 const connection = new Sequelize(configDB)
 
 const User = require('./models/user');
+<<<<<<< HEAD
 const User_autorizado = require('./models/user_autorizado');
 const Autorizacao = require('./models/autorizacao');
 const ApostaHasJogo = require('./models/apostaHasJogo');
@@ -24,8 +25,19 @@ Data.init(connection);
 ApostaP.init(connection);
 Estadio.init(connection);
 Clube.init(connection);
+=======
+const Aposta = require('./models/aposta');
+const apostaUser = require('./models/apostaUser');
+
+User.init(connection);
+>>>>>>> Nicholas
 Aposta.init(connection);
+apostaUser.init(connection);
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> Nicholas
 module.exports = connection;

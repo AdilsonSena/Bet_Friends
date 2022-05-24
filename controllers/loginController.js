@@ -35,6 +35,7 @@ const loginController = {
                         lastName: user.lastName,
                         email: user.email,
                         cpf: user.cpf,
+                        type: user.type,
                         birthDate: user.birthDate,
                         
                     } });
