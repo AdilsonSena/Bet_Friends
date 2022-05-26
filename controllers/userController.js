@@ -27,6 +27,7 @@ module.exports = {
                 type,
                 birthDate,
                 sub
+
             } = req.body;
 
             const user = await userModel.findOne({ where: { email } });
@@ -49,6 +50,7 @@ module.exports = {
                     type,
                     birthDate, 
                     sub
+
                 });
 
                 res.redirect("/login");

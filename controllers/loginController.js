@@ -27,9 +27,7 @@ const loginController = {
 
                 if (isPasswordCorrect || sub === user.sub) {
                     req.session.user = user;
-
                     res.redirect('/config')
-
                     return ;
                 }
             }

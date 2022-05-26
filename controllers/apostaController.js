@@ -2,7 +2,9 @@ const apostaModel = require('../database/models/aposta');
 
 const apostaController = {
     createAposta: async (req, res) => {
+
         const { titulo, regras, valor, data, type } = req.body;
+
 
         try {
             const aposta = await apostaModel.create({
@@ -11,6 +13,7 @@ const apostaController = {
                 valor,
                 data,
                 type
+
             });
     
             res.status(201).json(aposta);
@@ -34,7 +37,9 @@ const apostaController = {
 
     updateAposta: async (req, res) => {
         const { id } = req.params;
+
         const { titulo, regras, valor, data, type } = req.body;
+
 
         try {
             const aposta = await apostaModel.update({
@@ -43,6 +48,7 @@ const apostaController = {
                 valor,
                 data,
                 type
+
             }, {
                 where: { id }
             });
