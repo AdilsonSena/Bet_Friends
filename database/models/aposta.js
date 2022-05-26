@@ -7,6 +7,7 @@ class ApostaPersonalizada extends Model {
             regras: DataTypes.STRING(200),
             valor: DataTypes.INTEGER,
             data: DataTypes.DATE,
+            type: DataTypes.STRING(20),
             createdAt: DataTypes.DATE,
             updatedAt: DataTypes.DATE,
 
