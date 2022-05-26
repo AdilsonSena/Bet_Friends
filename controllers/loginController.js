@@ -18,36 +18,31 @@ const loginController = {
 
         }
 
-        const { email, password } = req.body;
+        const { email, password, sub} = req.body;
         const user = await userModel.findOne({ where: { email } });
 
         try {
             if (user) {
                 const isPasswordCorrect = bcrypt.compareSync(password, user.password);
 
-                if (isPasswordCorrect) {
+                if (isPasswordCorrect || sub === user.sub) {
                     req.session.user = user;
 
-                    res.redirect('/config').render('/users/config',{ user: {
-
-                        username: user.username,
-                        name: user.name,
-                        lastName: user.lastName,
-                        email: user.email,
-                        cpf: user.cpf,
-                        type: user.type,
-                        birthDate: user.birthDate,
-                        
-                    } });
+                    res.redirect('/config')
 
                     return ;
                 }
             }
+            return;
         } catch (error) {
              res.status(400).json(error)
              return;
 
         }
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect('/');
     }
 };
 

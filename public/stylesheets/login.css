@@ -49,7 +49,7 @@ main{
     border-radius: 10px;
     box-shadow: #191816 0px 0px 10px;
     background-image: linear-gradient( 70.5deg,  #230a58 14.7%, #4c1fa6 88.7% );
-    margin-left: 150px;
+    margin-left: 0px;
 }
 
 .form-top{
@@ -130,7 +130,10 @@ main{
     outline: 2.5px solid var(--primary-color);
     border: none;
 }
-
+.form-mid input#sub{
+    visibility: hidden;
+    margin: -5px;
+}
 
 
 .form-mid img{
@@ -235,7 +238,7 @@ main{
 @media(min-width:600px){
     .form{
         padding: 3rem 4rem;
-        margin:30px 74px 600px 74px;
+        margin:30px 74px 100px 74px;
     }
     
 

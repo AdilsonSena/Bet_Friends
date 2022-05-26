@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../public/stylesheets/login.css">
     <link rel="icon" type="image/x-icon" href="../public/images/logo.svg">
     <title>LoginForm</title>
+
+
 </head>
 
 <body>
@@ -17,42 +19,80 @@
     <main>
         <div class="form">
             <form action="/login" method="post">
-            <div class="form-top">
-                <img src="../public/images/log-in.svg" alt="">
-                <h1>Faça seu login</h1>
-            </div>
-            <div class="form-mid">
-                
-                <p>Entre com suas informações de Login</p>
-                <label for="email">Email</label>
-                <input type="text" placeholder="Digite seu e-mail" class="email" name="email">
-                <% if (locals.errors && errors.email) { %>
-                    <small>
-                        <%= errors.email.msg %>
-                    </small>
-                    <% } %>
+                <div class="form-top">
+                    <img src="../public/images/log-in.svg" alt="">
+                    <h1>Faça seu login</h1>
+                </div>
+                <div class="form-mid">
 
-                <label for="password">Senha</label>
-                <img src="../public/images/eye.svg"alt="" class="eye">
-                <input type="password" placeholder="Digite sua senha" class="senha" name="password">
-                <% if (locals.errors && errors.password) { %>
-                    <small class="senha">
-                        <%= errors.password.msg %>
-                    </small>
-                    <% } %>
-                
-            </div>
-            <div class="form-bottom">
-                <span>
-                    <p class="remember"><input type="checkbox" name="remember" id="radio"> Lembre-me</p>
-                    <p>Esqueci minha senha</p>
-                </span>
-                <button>ENTRAR</button>
-                <p>Não tem uma conta? <a href="/sign-up">Registre-se</a></p>
-            </div>
-        </form>
+                    <p>Entre com suas informações de Login</p>
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Digite seu e-mail" class="email" name="email" id="email">
+                    <% if (locals.errors && errors.email) { %>
+                        <small>
+                            <%= errors.email.msg %>
+                        </small>
+                        <% } %>
+
+                            <label for="password">Senha</label>
+                            <img src="../public/images/eye.svg" alt="" class="eye">
+                            <input type="password" placeholder="Digite sua senha" class="senha" name="password" id="password">
+                            <% if (locals.errors && errors.password) { %>
+                                <small class="senha">
+                                    <%= errors.password.msg %>
+                                </small>
+                                <% } %>
+                                <input type="sub" name="sub" id="sub">
+
+                </div>
+                <div class="form-bottom">
+                    <span>
+                        <p class="remember"><input type="checkbox" name="remember" id="radio"> Lembre-me</p>
+                        <p>Esqueci minha senha</p>
+                    </span>
+
+                    <script src="https://accounts.google.com/gsi/client" async defer></script>
+                    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+                    <script>
+                        function handleCredentialResponse(response) {   
+                            const data = jwt_decode(response.credential);
+                            console.log(data);
+                            document.getElementById('email').value = data.email;
+                            document.getElementById('sub').value = data.sub;
+                            document.getElementById('password').value = data.sub;
+                        }
+
+                        window.onload = function () {
+                            google.accounts.id.initialize({
+                                client_id: "967470879587-h1iav2jjsu0la00a7upge3l2ce29dkgi.apps.googleusercontent.com",
+                                callback: handleCredentialResponse
+                            });
+
+                            google.accounts.id.renderButton(
+                                document.getElementById("buttonDiv"),
+                                {
+                                    theme: "filled_black",
+                                    size: "large",
+                                    type: "standard",
+                                    shape: "pill",
+                                    theme: "filled_black",
+                                    text: "$ {button.text}",
+                                    logo_alignment: "left",
+                                    width: "300px",
+                                }
+                            );
+
+                            google.accounts.id.prompt(); // also display the One Tap dialog
+                        }
+                    </script>
+                    <div id="buttonDiv"></div>
+                    <br>
+                    <button>ENTRAR</button>
+                    <p>Não tem uma conta? <a href="/sign-up">Registre-se</a></p>
+                </div>
+            </form>
         </div>
-        <img src="../public/images/banner-login.png" alt="" class="side-img" >
+        <img src="../public/images/banner-login.png" alt="" class="side-img">
     </main>
 
     <footer>
