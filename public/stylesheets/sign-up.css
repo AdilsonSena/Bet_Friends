@@ -50,8 +50,7 @@ main .form {
     border-radius: 10px;
     box-shadow: #191816 0px 0px 10px;
     background-image: linear-gradient( 70.5deg,  #230a58 21%, #4c1fa6 88.7% );
-    margin-left: 150px;
-    
+    margin-bottom: 100px;
 }
 
 .form-top{
@@ -172,6 +171,11 @@ main .form {
     margin-top: -15px;
     margin-bottom: 10px;
 }
+.form-mid input#sub{
+ visibility: hidden;
+ margin: -30px;
+ padding: 0;
+}
 
 .form-bottom{
     display: flex;
@@ -210,12 +214,23 @@ main .form {
     font-weight: 600;
     
 }
+.form-bottom label{
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.form-bottom select{
+    height: 51px;
+    background-color: var(--darkpurple-color);
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 18px;border: none;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
 
 @media(min-width:600px){
-    .form{
-        padding: 3rem 4rem;
-        margin:30px 74px 300px 74px;
-    }
+    
     body{
         background: linear-gradient(90deg, #190642 35%, #A0CED2 100%);
     }
@@ -227,5 +242,9 @@ main .form {
         width: 850px;
         height: 100vh;
         max-width: 45vw;
+    }
+    main .form{
+        padding: 3rem 4rem;
+        margin-left: 160px;
     }
 }

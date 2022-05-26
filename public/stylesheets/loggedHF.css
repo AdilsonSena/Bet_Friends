@@ -18,7 +18,7 @@ header{
     background-color: var(--darkpurple-color);
     height: 8vh;
     min-height: 80px;
-    box-shadow: 2px 1px 1px 1px gray;
+    box-shadow: 2px 1px 10px 3px #11042e;
     box-sizing: border-box;
 }
 
