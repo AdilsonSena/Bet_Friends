@@ -35,7 +35,8 @@ module.exports = {
       },
       type:{
         type: Sequelize.STRING(20),
-        allowNull: false
+        allowNull: false,
+        defaultValue: 'user'
       },
       saldo:{
         type: Sequelize.DECIMAL(10, 2),
@@ -45,6 +46,10 @@ module.exports = {
       birthDate: {
         type: Sequelize.DATE,
         allowNull: false
+      },
+      sub:{
+        type: Sequelize.STRING(30),
+        allowNull: true,
       },
       createdAt: {
         type: Sequelize.DATE,

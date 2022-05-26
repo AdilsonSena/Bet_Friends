@@ -25,7 +25,9 @@ module.exports = {
                 password,
                 cpf,
                 type,
-                birthDate
+                birthDate,
+                sub
+
             } = req.body;
 
             const user = await userModel.findOne({ where: { email } });
@@ -46,7 +48,9 @@ module.exports = {
                     password: hash,
                     cpf,
                     type,
-                    birthDate
+                    birthDate, 
+                    sub
+
                 });
 
                 res.redirect("/login");

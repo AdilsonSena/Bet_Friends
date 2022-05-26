@@ -52,6 +52,10 @@ module.exports = {
         allowNull: false,       
 >>>>>>> Nicholas:database/migrations/20220520154152-apostas.js
       },
+      type:{
+        type: Sequelize.STRING(20),
+        allowNull: false,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,

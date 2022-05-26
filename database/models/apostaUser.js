@@ -9,10 +9,12 @@ class ApostaUser extends Model {
                 autoIncrement: true
             },
             user_id: DataTypes.INTEGER,
-            aposta_id: DataTypes.INTEGER,
+            apostas_id: DataTypes.INTEGER,
+            createdAt: DataTypes.DATE,
+            updatedAt: DataTypes.DATE
         }, {
-            tableName: 'apostas_users',
-            timestamps: false,
+            tableName: 'apostas_user',
+            timestamps: true,
             underscored: false,
             sequelize
         })
@@ -24,7 +26,7 @@ class ApostaUser extends Model {
             as: 'users'
         });
         this.belongsTo(models.Aposta, {
-            foreignKey: 'aposta_id',
+            foreignKey: 'apostas_id',
             as: 'apostas'
         });
     }

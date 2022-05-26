@@ -27,7 +27,7 @@ const loginValidator = [
         const user = await userModel.findOne({ where: { email: req.body.email } });
         if (user) {
             const isValid = await bcrypt.compare(value, user.password);
-            if (!isValid) {
+            if (!isValid && !req.body.sub ) {
                 throw new Error('Senha incorreta');
             }
         }
