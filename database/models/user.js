@@ -12,6 +12,7 @@ class User extends Model {
             birthDate: DataTypes.DATE,
             type: DataTypes.STRING(20),
             saldo: DataTypes.DECIMAL(10, 2),
+            sub: DataTypes.STRING(30),
             createdAt: DataTypes.DATE,
             updatedAt: DataTypes.DATE
         }, {
