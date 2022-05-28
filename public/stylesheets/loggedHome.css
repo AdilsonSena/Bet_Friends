@@ -118,3 +118,10 @@ main .mid-main{
 .mid-main .aposta .btns .side{
     margin: auto;
 }
+.mid-main .aposta .btns button{
+    height: 2rem;
+    border-radius: 8px;
+    background-color: #5D33B3;
+    color: #FED501;
+    font-weight: 600;
+}

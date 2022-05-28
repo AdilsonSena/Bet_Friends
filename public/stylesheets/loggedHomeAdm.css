@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root{
+    --darkpurple-color: #190642;
+    --lightpurple-color:#5D33B3;
+    --yellow-color: #FED501;
+    --lightblue-color: #A0CED2;
+    --blue-color: #56C5D0;
+}
+*{
+    font-family: 'Roboto';
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+main .top-main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem;
+}
+main .top-main img{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 2px 2px 5px 1px #120431;
+    
+}
+
+main .mid-main{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+.mid-main h2{
+    color:var(--yellow-color);
+    margin-right: auto;
+    margin-left: auto;
+}
+main .mid-main .aposta {
+    padding: 1.125rem;
+    background-color: var(--blue-color);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #3b1194;
+    height: 130px;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    font-weight: bold;
+    
+}
+
+main .mid-main .aposta .rank p{
+    border: 3px solid #2e0d74;
+    width: 7rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+main .mid-main .aposta .titulo {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 2rem;
+}
+
+main .mid-main .aposta .titulo .time1 {
+  display: flex;
+  gap: 0.5rem;
+}
+
+main .mid-main .aposta .titulo .time2 {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mid-main .aposta .btns button{
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: #5D33B3;
+    color: #FED501;
+    font-weight: 500;
+}
+
+@media (min-width: 640px){
+  main .mid-main .aposta {
+    gap: 1rem;
+    height: auto;
+    font-size: 24px;
+  }
+
+  main .mid-main .aposta .rank p {
+    width: 15rem;
+    border-radius: 2rem;
+    gap: 1rem;
+  }
+
+  main .mid-main .aposta .titulo {
+    gap: 10rem;
+  }
+
+  main .mid-main .aposta .btns button {
+    width: 15rem;
+    height: 3rem;
+  }
+}
