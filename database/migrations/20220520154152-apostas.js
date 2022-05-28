@@ -16,17 +16,27 @@ module.exports = {
         type: Sequelize.STRING(200),
         allowNull: false
       },
-      valor: {
+      ticket: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      data: {
+      valor_total:{
+            type: Sequelize.DECIMAL(10,2),
+            allowNull: false,
+            defaultValue: 0
+      },
+      data:{
         type: Sequelize.DATE,
         allowNull: false,       
       },
       type:{
         type: Sequelize.STRING(20),
         allowNull: false,
+      },
+      ativa:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: true
       },
       createdAt: {
         type: Sequelize.DATE,
