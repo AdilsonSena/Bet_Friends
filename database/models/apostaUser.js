@@ -10,6 +10,7 @@ class ApostaUser extends Model {
             },
             user_id: DataTypes.INTEGER,
             apostas_id: DataTypes.INTEGER,
+            side: DataTypes.BOOLEAN,
             createdAt: DataTypes.DATE,
             updatedAt: DataTypes.DATE
         }, {
