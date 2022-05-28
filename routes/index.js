@@ -7,6 +7,15 @@ router.get('/home', function(req, res, next) {
   res.render('index');
 });
 
+router.get('/homeAdm', function (req, res, next){
+  const type = req.session.user.type;
+  if(type === 'admin'){
+  res.render('loggedHomeAdm')
+  }else{
+    res.render('loggedHome')
+  }
+});
+
 router.get('/logged', function(req, res, next) {
   if(req.session.user){
   res.render('loggedHome');
