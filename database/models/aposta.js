@@ -5,9 +5,11 @@ class ApostaPersonalizada extends Model {
         super.init({
             titulo: DataTypes.STRING(100),
             regras: DataTypes.STRING(200),
-            valor: DataTypes.INTEGER,
             data: DataTypes.DATE,
             type: DataTypes.STRING(20),
+            ativa: DataTypes.BOOLEAN,
+            ticket: DataTypes.INTEGER,
+            valor_total: DataTypes.DECIMAL(10,2),
             createdAt: DataTypes.DATE,
             updatedAt: DataTypes.DATE,
 

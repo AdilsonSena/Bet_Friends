@@ -3,17 +3,19 @@ const apostaModel = require('../database/models/aposta');
 const apostaController = {
     createAposta: async (req, res) => {
 
-        const { titulo, regras, valor, data, type } = req.body;
+        const { titulo, regras, valor_total, data, type, ticket, ativa } = req.body;
 
 
         try {
             const aposta = await apostaModel.create({
+                
                 titulo,
                 regras,
-                valor,
                 data,
-                type
-
+                type,
+                ativa,
+                ticket,
+                valor_total,
             });
     
             res.status(201).json(aposta);
@@ -34,20 +36,26 @@ const apostaController = {
             return;
         }
     },
-
     updateAposta: async (req, res) => {
         const { id } = req.params;
 
-        const { titulo, regras, valor, data, type } = req.body;
-
+        const { titulo,
+            regras,
+            data,
+            type,
+            ativa,
+            ticket, 
+            valor_total, } = req.body;
 
         try {
             const aposta = await apostaModel.update({
                 titulo,
                 regras,
-                valor,
                 data,
-                type
+                type,
+                ativa,
+                ticket,
+                valor_total,
 
             }, {
                 where: { id }
@@ -69,6 +77,34 @@ const apostaController = {
             });
 
             res.status(200).json(aposta);
+            return;
+        } catch (error) {
+            res.status(400).json(error);
+            return;
+        }
+    },
+    desativarAposta: async (req, res) => {
+        const { id } = req.params;
+
+        try {
+            const aposta = await apostaModel.update({
+                ativa: false
+            }, {
+                where: { id }
+            });
+            res.status(200).json(aposta);
+            return;
+        } catch (error) {
+            res.status(400).json(error);
+            return;
+        }
+    },
+    listApostasAtivas: async (req, res) => {
+        try {
+            const apostas = await apostaModel.findAll({
+                where: { ativa: true }
+            });
+            res.status(200).json(apostas);
             return;
         } catch (error) {
             res.status(400).json(error);

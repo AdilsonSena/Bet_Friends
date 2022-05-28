@@ -9,4 +9,6 @@ router.post('/apostasUser', apostaUserController.createApostaUser);
 router.delete('/apostasUser/:id', apostaUserController.deleteApostaUser);
 router.put('/apostasUser/:id', apostaUserController.updateApostaUser);
 
+router.get('/apostasUser/apostas/:id', apostaUserController.findUserApostas);
+
 module.exports = router;

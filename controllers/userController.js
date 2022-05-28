@@ -6,15 +6,15 @@ const { validationResult } = require('express-validator');
 module.exports = {
     createUser: async (req, res) => {
         try {
-            
+
             const errors = validationResult(req);
 
             if (!errors.isEmpty()) {
                 req.flash('errors', errors.mapped());
                 req.flash('values', req.body);
 
-                 res.redirect('/sign-up');
-                 return;
+                res.redirect('/sign-up');
+                return;
             }
 
             const {
@@ -48,7 +48,7 @@ module.exports = {
                     password: hash,
                     cpf,
                     type,
-                    birthDate, 
+                    birthDate,
                     sub
 
                 });
@@ -57,8 +57,8 @@ module.exports = {
                 return;
             }
         } catch (error) {
-             res.status(400).json(error)
-             return;
+            res.status(400).json(error)
+            return;
         }
 
     },
@@ -115,5 +115,28 @@ module.exports = {
         } catch (error) {
             return res.status(400).json(error);
         }
+    },
+    
+    debitSaldo: async (req, res) => {
+
+        try {
+            const { id } = req.params;
+            const { saldo } = req.body;
+            const user = await userModel.findOne({ where: { id } });
+            if (user) {
+                const user = await userModel.update({
+                    saldo
+                }, {
+                    where: { id }
+                });
+                return res.status(200).json(user);
+            } else {
+                return res.status(200).json({ message: 'Usuário não encontrado' });
+            }
+        } catch (error) {
+            return res.status(400).json(error);
+        }
     }
+
 };
+
