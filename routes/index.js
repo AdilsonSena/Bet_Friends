@@ -108,12 +108,4 @@ router.get('/aposta-final', function(req, res, next) {
   }
 })
 
-router.get('/logged-home-adm', function(req, res, next) {
-  if(req.session.user){
-  res.render('./loggedHomeAdm')
-  }else{
-    res.render('login');
-  }
-})
-
 module.exports = router;
