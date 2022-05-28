@@ -81,7 +81,9 @@ module.exports = {
                 password,
                 cpf,
                 type,
-                birthDate
+                birthDate, 
+                saldo
+
             } = req.body;
             const user = await userModel.findOne({ where: { id } });
 
@@ -94,7 +96,8 @@ module.exports = {
                     password,
                     cpf,
                     type,
-                    birthDate
+                    birthDate, 
+                    saldo
                 }, {
                     where: { id }
                 });
