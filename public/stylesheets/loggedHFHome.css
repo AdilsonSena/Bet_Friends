@@ -24,7 +24,7 @@ header{
 
 header > img{
     min-width: 8vw;
-    padding: .825rem .825rem .825rem .825rem;
+    padding: 1rem;
 }
 
 header  > .dropdown{    
@@ -49,7 +49,7 @@ header .dropdown-toggle::after{
 
 header > .dropdown > ul.dropdown-menu{
     background-color: var(--yellow-color);
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     width: 100vw;
 }
 header > .dropdown > ul.dropdown-menu > li> a.dropdown-item:hover{
@@ -86,8 +86,8 @@ header nav.navbar > input {
 header nav.navbar-right > a.apostas {
     color: var(--yellow-color);
     text-decoration: none;
-    font-size: 0.825rem;
-    margin-right: 1.5rem;
+    font-size: 1.142rem;
+    margin-right: 2.4rem;
     white-space: nowrap;
 }
 header nav.navbar-right > .btn-group > ul.dropdown-menu{
@@ -100,15 +100,15 @@ header nav.navbar-right > .btn-group > ul.dropdown-menu > li > a:hover {
 header nav.navbar-right > .btn-group > ul.dropdown-menu > li > a {
     text-decoration: none;
     color: var(--darkpurple-color);
-    font-size: 1rem;
+    font-size: 1.6rem;
     margin-right: 10px;
 }
 
 header nav.navbar-right .btn-group button.btn{
-    width: 2rem;
-    height: 2rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1.6rem;
     background-color: var(--yellow-color);
     margin-right: 2vw;
     
@@ -116,7 +116,6 @@ header nav.navbar-right .btn-group button.btn{
 
 header nav.navbar-right .btn img{
     align-items: center;
-    margin-left: -4px;
 }
 
 
