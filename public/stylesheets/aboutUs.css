@@ -126,11 +126,15 @@ main > .snos > .imagens {
 main > .snos > .imagens > .imagens1 > img{
     margin-right: 50px;
     width:140px;
+    height: 140px;
+    border-radius: 50%;
 }
 
 main > .snos > .imagens > .imagens2 > img{
     margin-right: 50px;
     width: 140px;
+    height: 140px;
+    border-radius: 50%;
 }
 
 main > .snos > .imagens > .imagens1 > p{

@@ -167,6 +167,8 @@ main > div.optperfil > div.options > ul{
 
 main > div.optperfil > div.options > ul > li{
     margin-bottom: 10px;
+    width: 100%;
+    padding: 2px;
 }
 main > div.optperfil > div.options > ul > li > a{
     text-decoration: none;
@@ -174,6 +176,13 @@ main > div.optperfil > div.options > ul > li > a{
     font-size: 1rem;
     white-space: nowrap;
     
+}
+main > div.optperfil > div.options > ul > li:hover{
+    background-color: #190642;
+    width: 100%;
+}
+main > div.optperfil > div.options > ul >li > a:hover{
+    color: #FED501;
 }
 
 main > div.optperfil >div.coluna2 > div.perfil{
